@@ -1,9 +1,13 @@
 <?php 
-    $conexion = mysqli_connect("localhost","rool","","sabiduriademisabuelos");
-   if (!$conexion){
-        echo'Error al conectarse a la base de datos';
-    }
-    else{
-        echo'conectado a la base de datos';
+    class Conexion extends PDO{
+        public function __construct() {
+            try{
+                parent::__construct("mysql:host=localhost;dbname=sabiduria", "root", "");
+                parent::exec("set names utf8");
+            }catch(PDOException $e){
+                echo 'Ha surgido un error y no se puede conectar a la base de datos. Detalle: ' . $e->getMessage();
+                exit;
+            }
+        }
     }
 ?>
