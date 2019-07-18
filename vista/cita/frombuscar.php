@@ -16,7 +16,7 @@
                         <div class="text-center">
                             <h1>Formulario Buscar Usuario</h1>
                         </div>
-                        <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
+                        <a class="btn btn-default btn-light" href="../inicio.html" role="button">Volver al inicio</a>
                     </div>
             </div>
                 <div class="card-body">

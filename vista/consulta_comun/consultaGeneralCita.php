@@ -32,7 +32,6 @@
                       while ($reg=mysqli_fetch_array($registros))
                       {
                         echo " El Nombre es:   ".$reg['nombreyapellido']."<br>";
-                        echo " El Numero de Documento es:  ".$reg['numerodocumento']."<br>";
                         echo " La Fecha y Hora de la Cita es:  ".$reg['fecha_hora']."<br>";
                         echo " La Dirrecion de la EPS es:  ".$reg['direccion']."<br>";
                         echo " El Asunto de la Cita es:  ".$reg['asunto']."<br>";
@@ -44,7 +43,7 @@
 
                       mysqli_close($conexion);
 
-                      echo'<a class="btn btn-default btn-light bg-success"  href="../inicio.html" role="button">Volver al inicio</a>';
+                      echo'<a class="btn btn-default btn-light bg-success"  href="../registro.html" role="button">Volver al inicio</a>';
 
                     ?>
             </div>    

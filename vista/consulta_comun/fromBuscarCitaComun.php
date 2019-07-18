@@ -10,21 +10,19 @@
 </head>
 <body>
 		<div class="container">
-			<form method="POST" action="../consultas/consultaEspecificaCita.php">
+			<form method="POST" action="../consulta_comun/consultaEspecifica.php">
 					<div class="card">
-                    <div class="card-header bg-success">
+                    <div class="card-header bg-success "  >
                         <div class="text-center">
-                            <h1>Formulario Buscar Cita</h1>
+                            <h1>Formulario Buscar Usuario</h1>
                         </div>
-                        <a class="btn btn-default btn-light" href="../inicio.html" role="button">Volver al inicio</a>
-                        
-                        
+                        <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
                     </div>
             </div>
                 <div class="card-body">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Ingresar Numero de Documento:</label>
+                                        <label>Ingresar el nombre completo del paciente:</label>
                                         <input type="text" name="datobuscar" id="datobuscar" class="form-control">
                                 </div>
                         </div>
