@@ -3,7 +3,7 @@
 
  class login{
  	public function IniciarSesion($usuario,$contrasena){
- 		$sql = "SELET * FROM usuarios WHERE usuario = '" . $usuario . "'";
+ 		$sql = "SELECT * FROM usuarios WHERE usuario = '" . $usuario . "'";
  		$conexion = new Conexion();
  		$stmt = $conexion->prepare($sql);
  		$stmt->execute();
