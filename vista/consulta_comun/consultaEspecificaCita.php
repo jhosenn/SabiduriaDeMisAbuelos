@@ -8,6 +8,10 @@
 
 </head>
 <body>
+	<?php
+      include '../modulos/menu.php';
+
+    ?>
 	<div class="container">
        
             <div class="card">
@@ -25,7 +29,7 @@
 									    die("Problemas con la conexión");
 
 									$registros=mysqli_query($conexion,"select * 
-									                        from agendarcita where nombrecompletoo ='$_POST[datobuscar]'") or
+									                        from agendarcita where nombreyapellido ='$_POST[datobuscar]'") or
 									  die("Problemas en el select:".mysqli_error($conexion));
 
 									if ($reg=mysqli_fetch_array($registros))
@@ -50,3 +54,12 @@
 
 								
 							?>
+	</div>    
+      
+  </div>
+  
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>							
+
