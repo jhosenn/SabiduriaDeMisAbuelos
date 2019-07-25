@@ -3,7 +3,7 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>SABIDURIA DE MIS ABUELOS</title>
-    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
 
 </head>
@@ -52,10 +52,10 @@
         </div>
     </nav>-->
 	
-	<div class="container">
+	<div class="container"><br><br>
        
             <div class="card">
-                  <div class="card-header bg-success">
+                  <div class="card-header bg-purple">
                       <div class="row">
                           <div class="col">
                                <div class="text-center ">
@@ -80,7 +80,7 @@
 									echo " La Dirrecion de la EPS es:  ".$reg['direccion']."<br>";
 								 	echo " El Asunto de la Cita es:  ".$reg['asunto']."<br>";
 									  
-									  echo'<a class="btn btn-default btn-light bg-success" href="../cita/frombuscarCita.php" role="button">Volver al inicio</a>';
+									  echo'<a class="btn btn-default btn-light bg-purple" href="../cita/frombuscarCita.php" role="button">Volver al inicio</a>';
 									  
 									  }
 									

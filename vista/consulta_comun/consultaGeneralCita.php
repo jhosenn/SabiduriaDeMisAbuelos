@@ -13,42 +13,11 @@
       include '../modulos/menu.php';
 
     ?>
-<!--  <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand text-black" href="index.html"><strong>SABIDURIA DE MIS ABUELOS </strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
-                
 
-                <ul class="nav navbar-nav">
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-black" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Usuario</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="../consulta_comun/consultaGeneral.php">General</a><a class="dropdown-item" role="presentation" href="../consulta_comun/fromBuscarComun.php">Especifica</a></div>
-                       
-                    </li>
-                </ul>
-
-                
-
-                <ul class="nav navbar-nav">
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-black" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Citas</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">General</a><a class="dropdown-item" role="presentation" href="../consulta_comun/fromBuscarCitaComun.php">Especifica</a></div>
-                       
-                    </li>
-                </ul>
-
-
-
-                <ul class="nav navbar-nav">
-                     <div class="">
-                         <a href="../../index.html" class="btn text-black " role="button"><strong>Volver Al Menu</strong></a>
-                     </div>
-                </ul>
-
-            </div>
-
-        </div>
-    </nav> -->
-    <div class="container">
+    <div class="container"><br><br>
        
             <div class="card">
-                  <div class="card-header bg-success">
+                  <div class="card-header bg-info">
                       <div class="row">
                           <div class="col">
                                <div class="text-center ">
@@ -79,7 +48,7 @@
 
                       mysqli_close($conexion);
 
-                      echo'<a class="btn btn-default btn-light bg-success"  href="../registro.html" role="button">Volver al inicio</a>';
+                      echo'<a class="btn btn-default btn-light bg-info"  href="../registro.html" role="button">Volver al inicio</a>';
 
                     ?>
             </div>    

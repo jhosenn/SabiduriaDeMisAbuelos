@@ -12,10 +12,10 @@
       include '../modulos/menu.php';
 
     ?>
-	<div class="container">
+	<div class="container"><br><br>
        
             <div class="card">
-                  <div class="card-header bg-success">
+                  <div class="card-header bg-info">
                       <div class="row">
                           <div class="col">
                                <div class="text-center ">
@@ -39,7 +39,7 @@
 									echo " La Dirrecion de la EPS es:  ".$reg['direccion']."<br>";
 								 	echo " El Asunto de la Cita es:  ".$reg['asunto']."<br>";
 									  
-									  echo'<a class="btn btn-default btn-light bg-success" href="../consulta_comun/fromBuscarCitaComun.php" role="button">Volver al inicio</a>';
+									  echo'<a class="btn btn-default btn-light bg-info" href="../consulta_comun/fromBuscarCitaComun.php" role="button">Volver al inicio</a>';
 									  
 									  }
 									
