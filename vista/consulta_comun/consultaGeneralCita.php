@@ -13,8 +13,8 @@
       include '../modulos/menu.php';
 
     ?>
-
-    <div class="container"><br><br>
+<br><br>
+    <div class="container">
        
             <div class="card">
                   <div class="card-header bg-info">
@@ -40,7 +40,7 @@
                         echo " La Fecha y Hora de la Cita es:  ".$reg['fecha_hora']."<br>";
                         echo " La Dirrecion de la EPS es:  ".$reg['direccion']."<br>";
                         echo " El Asunto de la Cita es:  ".$reg['asunto']."<br>";
-                        echo "<hr>";
+                         echo "<hr style='border-color:info;'>";
 
                        
                         }
@@ -55,7 +55,7 @@
       
   </div>    
   
-    <script src="./../assets/js/jquery.min.js"></script>
-    <script src="./../assets/bootstrap/js/bootstrap.min.js"></script>     
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>     
 </body>
 </html>

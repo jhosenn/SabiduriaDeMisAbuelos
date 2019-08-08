@@ -23,7 +23,7 @@ var datos = {
  }).done(function (data) {
  	if (data == "OK") {
  		alert('Sesion Iniciada');
- 		window.location = '../inicio.html';
+ 		window.location = '../inicio.php';
  	}else{
  		alert(data);
  	}

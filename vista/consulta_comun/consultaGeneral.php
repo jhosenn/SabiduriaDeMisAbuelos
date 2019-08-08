@@ -44,7 +44,7 @@
                       echo " El Diagnostico es:  ".$reg['diagnostico']."<br>";
                       echo " El Medicamento es:  ".$reg['medicamento']."<br>";
                       ;
-                      echo"<hr>";
+                       echo "<hr style='border-color:info;'>";
                      
                       }
 
