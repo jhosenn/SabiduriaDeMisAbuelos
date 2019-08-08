@@ -18,17 +18,17 @@
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-purple">
-    <div class="container-fluid"><a class="navbar-brand text-dark" href="index.html"><strong>SABIDURIA DE MIS ABUELOS </strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="container-fluid"><a class="navbar-brand text-light" href="index.html"><strong>SABIDURIA DE MIS ABUELOS </strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse"
         id="navcol-1">
         <ul class="nav navbar-nav">
-            <a class="text-dark" href="../cita/from_usuario.php"><strong>Registro Usuario</strong></a>
+            <a class="text-light" href="../cita/from_usuario.php"><strong>Registro Usuario</strong></a>
 
         </ul>
 
         <ul class="nav navbar-nav">
             <li class="nav-item dropdown">
-                <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" aria-expanded="false" href="#">
+                <a class="dropdown-toggle nav-link text-light" data-toggle="dropdown" aria-expanded="false" href="#">
                     <strong>Consultar Usuario</strong>
                 </a>
                 <div class="dropdown-menu" role="menu">
@@ -39,13 +39,13 @@
         </ul>
 
         <ul class="nav navbar-nav">
-         <a class="text-dark" href="../cita/agendar cita.php"><strong>Agendar Cita</strong></a>
+         <a class="text-light" href="../cita/agendar cita.php"><strong>Agendar Cita</strong></a>
 
      </li>
  </ul>
 
  <ul class="nav navbar-nav">
-    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Citas</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="../consultas/consultaGeneralCita.php">General</a><a class="dropdown-item" role="presentation" href="../cita/frombuscarCita.php">Especifica</a></div>
+    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-light" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Citas</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="../consultas/consultaGeneralCita.php">General</a><a class="dropdown-item" role="presentation" href="../cita/frombuscarCita.php">Especifica</a></div>
 
     </li>
 </ul>
@@ -54,7 +54,7 @@
 
 <ul class="nav navbar-nav">
    <div class="">
-       <a href="../cerrar_session.php" class="btn text-dark" role="button"><strong>Cerrar Sesión</strong></a>
+       <a href="../cerrar_session.php" class="btn text-light" role="button"><strong>Cerrar Sesión</strong></a>
    </div>
 </ul>
 

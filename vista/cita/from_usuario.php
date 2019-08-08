@@ -24,7 +24,7 @@
                                 <div class="card">
                                         <div class="card-header bg-purple">
 
-                                            <div class="text-center ">
+                                            <div class="text-center text-light ">
                                                     <h1>Registro de Usuario</h1>
                                             </div>
                                                 
@@ -198,7 +198,7 @@
                                         
                                         <div class="card-footer bg-purple">
                                             <div class="text-center ">
-                                                <div class="btn-group">
+                                                <div class="btn-group"><br>
                                                     <input type="submit" name="Guardar" value="Guardar" class="btn btn-light"> &nbsp;
                                                     <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
                                                 </div>

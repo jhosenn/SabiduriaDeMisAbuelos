@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-06-2019 a las 20:52:41
+-- Tiempo de generación: 09-08-2019 a las 00:54:44
 -- Versión del servidor: 10.1.40-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -43,7 +43,9 @@ CREATE TABLE `agendarcita` (
 
 INSERT INTO `agendarcita` (`idcita`, `nombreyapellido`, `numerodocumento`, `fecha_hora`, `asunto`, `direccion`) VALUES
 (1, 'jose vargas', '101010', '2018-08-03T14:40', '            general                            ', 'calle 1'),
-(2, 'jose vargas', '555', '2018-08-03T14:40', '            general                            ', 'calle 1');
+(2, 'jose vargas', '555', '2018-08-03T14:40', '            general                            ', 'calle 1'),
+(3, 'brayan', '12347|', '2019-06-04T16:30', '                                        qeqd', 'calller'),
+(5, 'jhosen', '45678', '2019-07-19T15:00', 'tiene sueÃ±o y hambre                             ', 'calle 1');
 
 -- --------------------------------------------------------
 
@@ -75,6 +77,33 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`idusuario`, `nombrecompleto`, `tipodocumento`, `sexo`, `numerodocumento`, `edad`, `rh`, `eps`, `areaprotegida`, `fechanacimiento`, `origen`, `estadocivil`, `fechaingreso`, `estrato`, `escolaridad`, `diagnostico`, `medicamento`, `nombreyapellido`, `telefono`, `parentesco`) VALUES
+(6, 'jhosen', 'T.I', 'F', '45678', '17', 'A+', 'nueva eps', 'medilaser', '2001-12-20', 'neiva', 'Soltero(a)', '2019-07-18T14:08', 'Uno', 'bachiller', 'arrechera                                                    ', '    una cuca                                       ', 'miguel', '3204679176', 'mozo'),
+(7, 'william hernandez', 'C.C', 'M', '67891', '18', 'O-', 'nueva eps', 'medilaser', '2001-01-25', 'caqueta', 'Divorciado(a)', '2018-08-04T15:05', 'Uno', 'bachiller', ' parquinson                                                   ', ' no se                                                    ', 'camacho', '3102085302', 'amigo');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `idUsuario` int(11) NOT NULL,
+  `usuario` varchar(100) DEFAULT NULL,
+  `contrasena` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `usuario`, `contrasena`) VALUES
+(1, 'LUCINDA QUINTERO', '2bcd65834689ce424be9733ea14cd074');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -91,6 +120,12 @@ ALTER TABLE `usuario`
   ADD PRIMARY KEY (`idusuario`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`idUsuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -98,13 +133,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `agendarcita`
 --
 ALTER TABLE `agendarcita`
-  MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

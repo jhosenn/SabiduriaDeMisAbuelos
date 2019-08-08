@@ -22,7 +22,7 @@
 			<form method="POST" action="../consultas/consultaEspecificaCita.php">
 					<div class="card">
                     <div class="card-header bg-purple">
-                        <div class="text-center">
+                        <div class="text-center text-light">
                             <h1>Formulario Buscar Cita</h1>
                         </div>
                         <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>

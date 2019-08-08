@@ -20,8 +20,8 @@
       <div class="card-header bg-purple">
         <div class="row">
           <div class="col">
-           <div class="text-center ">
-            <h4>Listado de los Usuarios</h4>
+           <div class="text-center text-white ">
+            <h1>Listado de los Usuarios</h1>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@
             mysqli_close($conexion);
 
 
-            echo'<a class="btn btn-default btn-light bg-purple" href="../inicio.php" role="button">Volver al inicio</a>';
+            echo'<a class="btn btn-default bg-light" href="../inicio.php" role="button">Volver al inicio</a>';
 
             ?>
           </tbody>
