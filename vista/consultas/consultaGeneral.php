@@ -45,7 +45,6 @@
               <th>Estrato</th>
               <th>Escolaridad</th>
               <th>Diagnostico</th>
-              <th>Medicamento</th>
               <th>Acudiente</th>
               <th>Teléfono acudiente</th>
               <th>Parentesco</th>
@@ -79,15 +78,14 @@
               echo "<td>".$reg['estrato']."</td>";
               echo "<td>".$reg['escolaridad']."</td>";
               echo "<td>".$reg['diagnostico']."</td>";
-              echo "<td>".$reg['medicamento']."</td>";
               echo "<td>".$reg['nombreyapellido']."</td>";
               echo "<td>".$reg['telefono']."</td>";
               echo "<td>".$reg['parentesco']."</td>";
               echo "
                 <td>
                   <div class='btn-group'>
-                    <button class='btn btn-warning'>Modificar</button>
-                    <button class='btn btn-danger'>Eliminar</button>
+                   <a href='#'> <button class='btn btn-warning'>Modificar</button></a>
+                   <a href='#'> <button class='btn btn-danger'>Eliminar</button></a>
                   </div>
                 </td>
               ";

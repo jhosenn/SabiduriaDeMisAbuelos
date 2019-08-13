@@ -34,7 +34,7 @@
               <th>Fecha</th>
               <th>Direccion</th>
               <th>Asunto</th>
-              <th>Acciones</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -53,14 +53,7 @@
                   echo "<td>".$reg['fecha_hora']."</td>";
                   echo "<td>".$reg['direccion']."</td>";
                   echo "<td>".$reg['asunto']."</td>";
-                  echo "
-                    <td>
-                      <div class='btn-group'>
-                        <button class='btn btn-warning'>Modificar</button>
-                        <button class='btn btn-danger'>Eliminar</button>
-                      </div>
-                    </td>
-                  ";
+                  
                   echo "</tr>";
            }
 

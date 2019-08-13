@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-08-2019 a las 00:54:44
+-- Tiempo de generación: 13-08-2019 a las 23:49:25
 -- Versión del servidor: 10.1.40-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -50,6 +50,34 @@ INSERT INTO `agendarcita` (`idcita`, `nombreyapellido`, `numerodocumento`, `fech
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `formula`
+--
+
+CREATE TABLE `formula` (
+  `idformula` int(11) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  `idmedicamento` int(11) NOT NULL,
+  `cantidad` varchar(100) NOT NULL,
+  `frecuencia` enum('diario','cada 8 horas','cada 12 horas','') NOT NULL,
+  `observacion` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `medicamento`
+--
+
+CREATE TABLE `medicamento` (
+  `idmedicamento` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` varchar(200) NOT NULL,
+  `estado` bit(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -70,7 +98,6 @@ CREATE TABLE `usuario` (
   `estrato` varchar(5) NOT NULL,
   `escolaridad` varchar(30) NOT NULL,
   `diagnostico` varchar(100) NOT NULL,
-  `medicamento` varchar(100) NOT NULL,
   `nombreyapellido` varchar(100) NOT NULL,
   `telefono` varchar(30) NOT NULL,
   `parentesco` varchar(100) NOT NULL
@@ -80,9 +107,9 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`idusuario`, `nombrecompleto`, `tipodocumento`, `sexo`, `numerodocumento`, `edad`, `rh`, `eps`, `areaprotegida`, `fechanacimiento`, `origen`, `estadocivil`, `fechaingreso`, `estrato`, `escolaridad`, `diagnostico`, `medicamento`, `nombreyapellido`, `telefono`, `parentesco`) VALUES
-(6, 'jhosen', 'T.I', 'F', '45678', '17', 'A+', 'nueva eps', 'medilaser', '2001-12-20', 'neiva', 'Soltero(a)', '2019-07-18T14:08', 'Uno', 'bachiller', 'arrechera                                                    ', '    una cuca                                       ', 'miguel', '3204679176', 'mozo'),
-(7, 'william hernandez', 'C.C', 'M', '67891', '18', 'O-', 'nueva eps', 'medilaser', '2001-01-25', 'caqueta', 'Divorciado(a)', '2018-08-04T15:05', 'Uno', 'bachiller', ' parquinson                                                   ', ' no se                                                    ', 'camacho', '3102085302', 'amigo');
+INSERT INTO `usuario` (`idusuario`, `nombrecompleto`, `tipodocumento`, `sexo`, `numerodocumento`, `edad`, `rh`, `eps`, `areaprotegida`, `fechanacimiento`, `origen`, `estadocivil`, `fechaingreso`, `estrato`, `escolaridad`, `diagnostico`, `nombreyapellido`, `telefono`, `parentesco`) VALUES
+(6, 'jhosen', 'T.I', 'F', '45678', '17', 'A+', 'nueva eps', 'medilaser', '2001-12-20', 'neiva', 'Soltero(a)', '2019-07-18T14:08', 'Uno', 'bachiller', 'arrechera                                                    ', 'miguel', '3204679176', 'mozo'),
+(7, 'william hernandez', 'C.C', 'M', '67891', '18', 'O-', 'nueva eps', 'medilaser', '2001-01-25', 'caqueta', 'Divorciado(a)', '2018-08-04T15:05', 'Uno', 'bachiller', ' parquinson                                                   ', 'camacho', '3102085302', 'amigo');
 
 -- --------------------------------------------------------
 
@@ -114,6 +141,20 @@ ALTER TABLE `agendarcita`
   ADD PRIMARY KEY (`idcita`);
 
 --
+-- Indices de la tabla `formula`
+--
+ALTER TABLE `formula`
+  ADD PRIMARY KEY (`idformula`),
+  ADD KEY `fk_usuario_formula` (`idusuario`),
+  ADD KEY `fk_medicamento_formula` (`idmedicamento`);
+
+--
+-- Indices de la tabla `medicamento`
+--
+ALTER TABLE `medicamento`
+  ADD PRIMARY KEY (`idmedicamento`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -136,10 +177,33 @@ ALTER TABLE `agendarcita`
   MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de la tabla `formula`
+--
+ALTER TABLE `formula`
+  MODIFY `idformula` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `medicamento`
+--
+ALTER TABLE `medicamento`
+  MODIFY `idmedicamento` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `formula`
+--
+ALTER TABLE `formula`
+  ADD CONSTRAINT `fk_medicamento_formula` FOREIGN KEY (`idmedicamento`) REFERENCES `medicamento` (`idmedicamento`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_usuario_formula` FOREIGN KEY (`idusuario`) REFERENCES `usuario` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

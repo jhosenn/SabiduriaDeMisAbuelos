@@ -29,17 +29,14 @@
           <thead>
             <tr>
               <th>Nombre</th>
-              
               <th>Género</th>
-              
-              <th>Edad</th>
+               <th>Edad</th>
               <th>RH</th>
               <th>EPS</th>
               <th>Area Protejida</th>
               <th>Fecha Nacimiento</th>
               <th>Diagnostico</th>
-              <th>Medicamento</th>
-              <th>Acciones</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -62,15 +59,7 @@
               echo "<td>".$reg['areaprotegida']."</td>";
               echo "<td>".$reg['fechanacimiento']."</td>";
               echo "<td>".$reg['diagnostico']."</td>";
-              echo "<td>".$reg['medicamento']."</td>";
-              echo "
-                <td>
-                  <div class='btn-group'>
-                    <button class='btn btn-warning'>Modificar</button>
-                    <button class='btn btn-danger'>Eliminar</button>
-                  </div>
-                </td>
-              ";
+              
               echo "</tr>";
             }
 

@@ -21,8 +21,8 @@
       <div class="card-header bg-purple">
         <div class="row">
           <div class="col">
-           <div class="text-center ">
-            <h4>Listado de los Usuarios</h4>
+           <div class="text-center text-light ">
+            <h1>Listado de los Usuarios</h1>
           </div>
         </div>
       </div>
@@ -59,8 +59,10 @@
                   echo "
                     <td>
                       <div class='btn-group'>
-                        <button class='btn btn-warning'>Modificar</button>
-                        <button class='btn btn-danger'>Eliminar</button>
+                      
+                      <a href='#'>  <button class='btn btn-warning'>Modificar</button></a>
+                        
+                       <a href='#'> <button class='btn btn-danger'>Eliminar</button></a>
                       </div>
                     </td>
                   ";
@@ -78,7 +80,7 @@
             mysqli_close($conexion);
 
 
-            echo'<a class="btn btn-default btn-light bg-purple" href="../registro.html" role="button">Volver al inicio</a>';
+            echo'<a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>';
 
             ?>
           </tbody>

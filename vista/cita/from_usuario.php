@@ -158,15 +158,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="card-body">
-                                             <div class="row">
-                                                <div class="col-md-10">
-                                                    <label>MEDICAMENTOS:</label><br>
-                                                    <textarea name="medicamentos" cols="125" rows="3" placeholder="Describe los medicamentos del Usuario" >
-                                                    </textarea>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
 
                                          <div class="text-center ">
                                                 <h4>  CONTACTAR EN CASO DE EMERGENCIA </h4><br>

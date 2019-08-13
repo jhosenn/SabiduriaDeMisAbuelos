@@ -57,6 +57,12 @@
                     </li>
                 </ul>
 
+                 <ul class="nav navbar-nav">
+                    <a class="text-light" href="../vista/cita/from_medicacion.php"><strong>Medicacion</strong></a>
+
+                </ul>
+
+
 
 
                 <ul class="nav navbar-nav">

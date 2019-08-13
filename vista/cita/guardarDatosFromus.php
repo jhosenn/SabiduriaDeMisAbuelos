@@ -28,7 +28,7 @@ if(mysqli_num_rows($verificar_numerodocumento) > 0){
 
 
 
-mysqli_query($conexion," INSERT INTO usuario(nombrecompleto, tipodocumento, sexo, numerodocumento, edad, rh, eps, areaprotegida, fechanacimiento, origen, estadocivil, fechaingreso, estrato, escolaridad, diagnostico, medicamento, nombreyapellido, telefono, parentesco)
+mysqli_query($conexion," INSERT INTO usuario(nombrecompleto, tipodocumento, sexo, numerodocumento, edad, rh, eps, areaprotegida, fechanacimiento, origen, estadocivil, fechaingreso, estrato, escolaridad, diagnostico,  nombreyapellido, telefono, parentesco)
 	values('$_POST[nombre]',
 	'$_POST[ti_doc]',
 	'$_POST[sexo]',
@@ -44,7 +44,6 @@ mysqli_query($conexion," INSERT INTO usuario(nombrecompleto, tipodocumento, sexo
 	'$_POST[estrato]',
 	'$_POST[var_esc]',
 	'$_POST[diagnostico]',
-	'$_POST[medicamentos]',
 	'$_POST[nombre_apellido]',
 	'$_POST[var_tel]',
 	'$_POST[var_par]')") or die("problemas en el select".mysqli_error($conexion));
