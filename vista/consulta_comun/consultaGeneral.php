@@ -67,7 +67,7 @@
             mysqli_close($conexion);
 
 
-            echo'<a class="btn btn-default btn-light bg-purple" href="../inicio.php" role="button">Volver al inicio</a>';
+            echo'<a class="btn btn-default btn-light bg-purple" href="../registro.html" role="button">Volver al inicio</a>';
 
             ?>
           </tbody>

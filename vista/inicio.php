@@ -62,6 +62,11 @@
 
                 </ul>
 
+                <ul class="nav navbar-nav">
+                 <a class="text-light" href="../cita/from_registromedicamento.php"><strong>Registro de medicamento</strong></a>
+
+                </ul>
+
 
 
 
