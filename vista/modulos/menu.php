@@ -1,3 +1,6 @@
+<html>
+
+<head>
 <style type="text/css">
         body{
             margin: 0;
@@ -9,41 +12,60 @@
             background-attachment: fixed;
         }
     </style>
-<nav class="navbar navbar-expand-lg navbar-light bg-info ">
-    <div class="container-fluid"><a class="navbar-brand text-light" href="index.html"><strong>SABIDURIA DE MIS ABUELOS </strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse"
-        id="navcol-1">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SABIDURIA DE MIS ABUELOS</title>
+    
+     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/all.min.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css"  id="bootstrap-css">
+
+</head>
 
 
-        <ul class="nav navbar-nav">
-            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-light" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Usuario</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="../consulta_comun/consultaGeneral.php">General</a><a class="dropdown-item" role="presentation" href="../consulta_comun/fromBuscarComun.php">Especifica</a></div>
-
-            </li>
-        </ul>
+<body>    
 
 
+    <nav class="navbar navbar-light navbar-expand-lg mainmenu bg-info">
+                    <a class="navbar-brand text-light" href="#">Sabiduría de mis abuelos</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Usuario</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="../consulta_comun/consultaGeneral.php">General</a></li>
+                                <li><a href="../consulta_comun/fromBuscarComun.php">Especifica</a></li>
+                               
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Cita</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="../consulta_comun/consultaGeneralCita.php">General</a></li>
+                                <li><a href="../consulta_comun/fromBuscarCitaComun.php">Especifica</a></li>
+                               
+                                </ul>
+                            </li>
 
-        <ul class="nav navbar-nav">
-            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-light" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Citas</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="../consulta_comun/consultaGeneralCita.php">General</a><a class="dropdown-item" role="presentation" href="../consulta_comun/fromBuscarCitaComun.php">Especifica</a></div>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Medicacion</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="../consulta_comun/consultaGeneralMedicacion.php">General</a></li>
+                                <li><a href="../consulta_comun/fromBuscarMedicacionComun.php">Especifica</a></li>
+                               
+                                </ul>
+                            </li>
 
-            </li>
-        </ul>
+                            <li><a href="../../index.html" class="btn text-light " role="button">Volver Al Menu</a></li>
+                        </ul>
+                    </div>
+    </nav>
 
-        <ul class="nav navbar-nav">
-            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-light" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Medicacion</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="../consulta_comun/consultaGeneralMedicacion.php">General</a><a class="dropdown-item" role="presentation" href="../consulta_comun/fromBuscarMedicacionComun.php">Especifica</a></div>
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
 
-            </li>
-        </ul>
-
-
-
-        <ul class="nav navbar-nav">
-           <div class="">
-               <a href="../../index.html" class="btn text-light " role="button"><strong>Volver Al Menu</strong></a>
-           </div>
-       </ul>
-
-   </div>
-
-</div>
-</nav>
+</body>
+</html>

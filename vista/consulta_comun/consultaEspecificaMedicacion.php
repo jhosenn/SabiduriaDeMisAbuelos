@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col">
            <div class="text-center text-white ">
-            <h1>Listado De Medicaciones</h1>
+            <h1>Listado De Medicacione</h1>
           </div>
         </div>
       </div>

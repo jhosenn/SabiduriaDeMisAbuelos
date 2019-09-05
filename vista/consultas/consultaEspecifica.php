@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col">
            <div class="text-center text-white ">
-            <h1>Listado De Los Usuarios</h1>
+            <h1>Listado Del Usuario</h1>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
                     die("Problemas con la conexión");
 
                 $registros=mysqli_query($conexion,"select * 
-                                        from usuario where numerodocumento ='$_POST[datobuscar]'") or
+                                        from usuario where nombrecompleto ='$_POST[datobuscar]'") or
                   die("Problemas en el select:".mysqli_error($conexion));
 
                 if ($reg=mysqli_fetch_array($registros))

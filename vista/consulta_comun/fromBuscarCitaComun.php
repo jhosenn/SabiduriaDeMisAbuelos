@@ -19,7 +19,7 @@
 					<div class="card">
                     <div class="card-header bg-info "  >
                         <div class="text-center text-light">
-                            <h1>Formulario Buscar Cita</h1>
+                            <h1>Buscar Cita</h1>
                         </div>
                         <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
                     </div>
@@ -27,8 +27,16 @@
                 <div class="card-body bg-light">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Ingresar el nombre completo del paciente:</label>
-                                        <input type="text" name="datobuscar" id="datobuscar" class="form-control">
+                                        <label>Nombre Del Paciente</label>
+                                        <select name="datobuscar" id="datobuscar" class="form-control">
+                                            <?php
+                                                $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos");
+                                                $registros=mysqli_query($conexion,"select * from agendarcita");
+                                                while($row = mysqli_fetch_object($registros)){
+                                                    echo '<option value="' . $row->nombreyapellido . '">' . $row->nombreyapellido . '</option>';
+                                                }
+                                            ?>
+                                    </select>
                                 </div>
                         </div>
                 </div>

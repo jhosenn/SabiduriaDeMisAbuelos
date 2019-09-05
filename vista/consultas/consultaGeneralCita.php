@@ -50,6 +50,21 @@
 
                       while ($reg=mysqli_fetch_array($registros))         
                 {
+
+                  $fecha1 = new DateTime("now", new DateTimeZone("America/Bogota"));;
+                  $fecha2 = new DateTime($reg['fecha_hora'], new DateTimeZone("America/Bogota"));
+                  $diff = date_diff($fecha1, $fecha2);
+                  $total = $diff->format('%d Days %h Hours %i Minutos');
+                  var_dump($fecha1);
+                  echo "<br>";
+                  echo "<br>";
+                  var_dump($fecha2);
+                  echo "<br>";
+                  echo "<br>";
+                  var_dump($total);
+                  echo "<br>";
+                  echo "<br>";
+                  continue;
                   echo "<tr>";
                   echo "<td>".$reg['nombreyapellido']."</td>";
                   echo "<td>".$reg['numerodocumento']."</td>";

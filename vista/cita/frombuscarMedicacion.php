@@ -22,7 +22,7 @@
             <div class="card">
                 <div class="card-header bg-purple "  >
                     <div class="text-center text-light">
-                        <h1>Formulario Buscar Medicacion</h1>
+                        <h1>Buscar Medicacion</h1>
                     </div>
                     <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
                 </div>
@@ -30,7 +30,7 @@
             <div class="card-body bg-light">
                 <div class="row">
                     <div class="col-md-10">
-                        <label>Ingresar Numero de Documento:</label>
+                        <label>Nombre Del Paciente</label>
                         <select name="datobuscar" id="datobuscar" class="form-control">
                             <?php
                                 $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos");

@@ -22,7 +22,7 @@
         <div class="row">
           <div class="col">
            <div class="text-center text-light ">
-            <h1>Listado De Las Citas</h1>
+            <h1>Listado De Cita</h1>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
                       die("Problemas con la conexión");
 
                   $registros=mysqli_query($conexion,"select * 
-                                          from agendarcita where numerodocumento ='$_POST[datobuscar]'") or
+                                          from agendarcita where nombreyapellido ='$_POST[datobuscar]'") or
                     die("Problemas en el select:".mysqli_error($conexion));
 
                   if ($reg=mysqli_fetch_array($registros))         

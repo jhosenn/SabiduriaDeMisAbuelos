@@ -19,7 +19,7 @@
         <div class="row">
           <div class="col">
            <div class="text-center text-light ">
-            <h1>Listado De Los Usuarios</h1>
+            <h1>Listado De Usuarios</h1>
           </div>
         </div>
       </div>
