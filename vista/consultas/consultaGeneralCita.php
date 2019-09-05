@@ -14,15 +14,15 @@
    ?>
 
 
-  
-  <div class="container"><br><br>
+  <br><br>
+  <div class="container bg-light"><br>
 
     <div class="card">
       <div class="card-header bg-purple">
         <div class="row">
           <div class="col">
            <div class="text-center text-light ">
-            <h1>Listado de los Usuarios</h1>
+            <h1>Listado De Las Citas</h1>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@
         </div>
       </div>
     </div>
-  </div>         
+  </div>  <br>       
 
   <script src="../../assets/js/jquery.min.js"></script>
   <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>

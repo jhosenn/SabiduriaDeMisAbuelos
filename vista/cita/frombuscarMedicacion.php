@@ -4,35 +4,38 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>SABIDURIA DE MIS ABUELOS</title>
-    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
 
 </head>
-<body class="text-black">
-     <?php
-      include '../modulos/menu.php';
+<body>
+    <?php 
+    include '../modulos/menu_administrador.php';
+     ?>
+  
+  
 
-    ?>
-            <br><br>
+
+     <br><br>
 		<div class="container bg-light"><br>
-			<form method="POST" action="../consulta_comun/consultaEspecificaCita.php">
+			<form method="POST" action="../consultas/consultaEspecificaMedicacion.php">
 					<div class="card">
-                    <div class="card-header bg-info "  >
+                    <div class="card-header bg-purple "  >
                         <div class="text-center text-light">
-                            <h1>Formulario Buscar Cita</h1>
+                            <h1>Formulario Buscar Medicacion</h1>
                         </div>
-                        <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
+                        <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
                     </div>
             </div>
                 <div class="card-body bg-light">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Ingresar el nombre completo del paciente:</label>
+                                        <label>Ingresar Numero de Documento:</label>
                                         <input type="text" name="datobuscar" id="datobuscar" class="form-control">
                                 </div>
                         </div>
                 </div>
-                <div class="card-footer bg-info">
+                <div class="card-footer bg-purple">
                         <div class="text-center ">
                                 <div class="btn-group">
                                         <input type="submit" name="Buscar" value="Buscar" class="btn btn-light">
@@ -49,8 +52,9 @@
 
 
 		</div>
-        
-    <script src="../../assets/js/jquery.min.js"></script>
+
+        <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>

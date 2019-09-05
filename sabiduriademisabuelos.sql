@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-08-2019 a las 23:49:25
--- Versión del servidor: 10.1.40-MariaDB
--- Versión de PHP: 7.3.5
+-- Tiempo de generación: 27-08-2019 a las 01:44:57
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -62,6 +62,13 @@ CREATE TABLE `formula` (
   `observacion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `formula`
+--
+
+INSERT INTO `formula` (`idformula`, `idusuario`, `idmedicamento`, `cantidad`, `frecuencia`, `observacion`) VALUES
+(1, 6, 1, '2 TABLETAS ', 'cada 8 horas', ' VIA ORAL                 ');
+
 -- --------------------------------------------------------
 
 --
@@ -74,6 +81,13 @@ CREATE TABLE `medicamento` (
   `descripcion` varchar(200) NOT NULL,
   `estado` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `medicamento`
+--
+
+INSERT INTO `medicamento` (`idmedicamento`, `nombre`, `descripcion`, `estado`) VALUES
+(1, 'ACETAMINOFEN', 'TABLETA	                            	\r\n	                            ', b'1');
 
 -- --------------------------------------------------------
 
@@ -180,13 +194,13 @@ ALTER TABLE `agendarcita`
 -- AUTO_INCREMENT de la tabla `formula`
 --
 ALTER TABLE `formula`
-  MODIFY `idformula` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idformula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `medicamento`
 --
 ALTER TABLE `medicamento`
-  MODIFY `idmedicamento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idmedicamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

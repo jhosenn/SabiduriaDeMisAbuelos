@@ -10,16 +10,16 @@
   include '../modulos/menu.php';
   ?>
 
-
+  <br><br>
   
-  <div class="container"><br><br>
+  <div class="container bg-light"><br>
 
     <div class="card">
       <div class="card-header bg-info">
         <div class="row">
           <div class="col">
-           <div class="text-center ">
-            <h4>Listado de los Usuarios</h4>
+           <div class="text-center text-light ">
+            <h1>Listado De Los Usuarios</h1>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-  </div>         
+  </div>       <br>  
 
   <script src="../../assets/js/jquery.min.js"></script>
   <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>

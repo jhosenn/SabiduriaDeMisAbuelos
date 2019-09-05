@@ -29,7 +29,7 @@
 		 	  	   	   </div>
 		 	  	   	    
 		 	  	   </div>
-		 	  	   <div class="card-body">
+		 	  	   <div class="card-body bg-light">
 		 	  	   	   <div class="row">
 		 	  	   	   	   <div class="col-md-10">
 		 	  	   	   	   	  <label>Nombre del medicamento</label>
@@ -61,14 +61,14 @@
                 </div><br>
 
                  <div class="card-footer bg-purple">
-                                            <div class="text-center ">
-                                                <div class="btn-group"><br>
-                                                    <input type="submit" name="Guardar" value="Guardar" class="btn btn-light"> &nbsp;
-                                                    <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
-                                                </div>
+                       <div class="text-center ">
+                          <div class="btn-group"><br>
+                             <input type="submit" name="Guardar" value="Guardar" class="btn btn-light"> &nbsp;
+                            <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
+                          </div>
 
-                                            </div>
-                                        </div>
+                     </div>
+               </div><br>
 		 	  </form>
 		 </div>
 

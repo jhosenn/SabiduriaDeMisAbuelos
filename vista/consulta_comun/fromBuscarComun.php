@@ -13,12 +13,12 @@
       include '../modulos/menu.php';
 
     ?>
-
-		<div class="container"><br><br>
+        <br><br>
+		<div class="container bg-light"><br>
 			<form method="POST" action="../consulta_comun/consultaEspecifica.php">
 					<div class="card">
                     <div class="card-header bg-info "  >
-                        <div class="text-center">
+                        <div class="text-center text-light">
                             <h1>Formulario Buscar Usuario</h1>
                         </div>
                         <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
@@ -41,7 +41,7 @@
                                 </div>
 
                        </div>
-            </div>
+            </div><br>
 
 
 		     </form>				

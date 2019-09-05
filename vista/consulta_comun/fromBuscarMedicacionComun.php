@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="../../assets/css/styles.css">
 
 </head>
-<body class="text-black">
+<body>
      <?php
       include '../modulos/menu.php';
 
     ?>
-            <br><br>
+        <br><br>
 		<div class="container bg-light"><br>
-			<form method="POST" action="../consulta_comun/consultaEspecificaCita.php">
+			<form method="POST" action="../consulta_comun/consultaEspecificaMedicacion.php">
 					<div class="card">
                     <div class="card-header bg-info "  >
                         <div class="text-center text-light">
-                            <h1>Formulario Buscar Cita</h1>
+                            <h1>Formulario Buscar Medicacion</h1>
                         </div>
                         <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
                     </div>
@@ -52,5 +52,6 @@
         
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>

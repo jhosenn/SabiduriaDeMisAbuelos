@@ -16,8 +16,8 @@
   
 
 
-
-		<div class="container"><br><br>
+     <br><br>
+		<div class="container bg-light"><br>
 			<form method="POST" action="../consultas/consultaEspecifica.php">
 					<div class="card">
                     <div class="card-header bg-purple "  >
@@ -44,7 +44,7 @@
                                 </div>
 
                        </div>
-            </div>
+            </div><br>
 
 
 		     </form>				

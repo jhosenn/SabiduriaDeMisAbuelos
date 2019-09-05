@@ -17,7 +17,7 @@
 
 
   ?>
-  <br>
+  <br><br>
 
   <div class="container bg-light"><br>
     <form method="POST" action="guardarDatosDeMedicacion.php">
@@ -60,31 +60,40 @@
                 ?>
               </select>
             </div>
+            <button class="btn btn-white" title="Agregar Nuevo Medicamento">
+             <h1><i class="icon-plus icon-">+</i></h1>
+            </button>
           </div>
           <div class="row">
             <div class="col-md-5">
               <label>Cantidad</label>
               <input type="text" name="cant" id="cant" class="form-control">
             </div>
-          </div>
-          <div class="row">
+          
+          
             <div class="col-md-5">
               <label>Frecuencia</label>
               <select name="fre" id="fre" class="form-control" >
-                <option value="Diario">Diario</option>
                 <option value="Cada 8 horas">Cada 8 horas</option>
                 <option value="Cada 12 horas">Cada 12 horas</option>
+                <option value="Cada 24 horas">Cada 24 horas</option>
+                <option value="Cada 8 dias">Cada 8 dias</option>
+                <option value="Cada 15 dias">Cada 15 dias</option>
               </select>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-5">
-            <label>Descripcion:</label><br>
-            <textarea name="descripcion" id="descripcion" cols="125" rows="3" placeholder="EJ: modo de aplicacion" >
-             </textarea>
-         </div>
-    </div>
+          </div>  
+          
+        
+        
+            <div class="row">
+                 <div class="col-md-5">
+                  <label>Descripcion</label><br>
+                  <textarea name="descripcion" cols="125" rows="3" placeholder="De que " >
+                  </textarea>
+               </div>
+                        
+           </div>
+        </div>   
     </div>
                  
       

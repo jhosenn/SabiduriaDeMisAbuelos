@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+if(isset($_SESSION) && count($_SESSION) <= 0){
+  echo "<script>window.location='../index.html';</script>";
+}
+?>
+
 <html>
 
 <head>
@@ -17,73 +24,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>SABIDURIA DE MIS ABUELOS</title>
     
-     <link rel="stylesheet" href="./../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./../assets/css/all.min.css">
+     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"  id="bootstrap-css">
+
 </head>
 
 
-<body class="text-white">
-    
-    <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand text-white" href="index.html"><strong>SABIDURIA DE MIS ABUELOS </strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
-                <ul class="nav navbar-nav">
-                    <a class="text-white" href="../vista/cita/from_usuario.php"><strong>Registro Usuario</strong></a>
-                        
-                </ul>
-
-                <ul class="nav navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">
-                            <strong>Consultar Usuario</strong>
-                        </a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="../vista/consultas/consultaGeneral.php">General</a>
-                            <a class="dropdown-item" role="presentation" href="../vista/cita/frombuscar.php">Especifica</a>
-                        </div>
-                    </li>
-                </ul>
-
-                <ul class="nav navbar-nav">
-                   <a class="text-white" href="../vista/cita/agendar cita.php"><strong>Agendar Cita</strong></a>
-                        
-                    </li>
-                </ul>
-
-                <ul class="nav navbar-nav">
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#"><strong>Consultar Citas</strong></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="../vista/consultas/consultaGeneralCita.php">General</a><a class="dropdown-item" role="presentation" href="../vista/cita/frombuscarCita.php">Especifica</a></div>
-                       
-                    </li>
-                </ul>
-
-                 <ul class="nav navbar-nav">
-                    <a class="text-light" href="../vista/cita/from_medicacion.php"><strong>Medicacion</strong></a>
-
-                </ul>
-
-                <ul class="nav navbar-nav">
-                 <a class="text-light" href="../cita/from_registromedicamento.php"><strong>Registro de medicamento</strong></a>
-
-                </ul>
+<body>
 
 
 
 
-                <ul class="nav navbar-nav">
-                     <div class="">
-                         <a href="cerrar_session.php" class="btn text-white " role="button"><strong>Cerrar Sesión</strong></a>
-                     </div>
-                </ul>
 
-            </div>
 
-        </div>
-    </nav>
-    
-   <script src="./../assets/js/jquery.min.js"></script>
-  <script src="./../assets/bootstrap/js/bootstrap.min.js"></script>
+
+            <nav class="navbar navbar-light navbar-expand-lg mainmenu bg-purple">
+                 <a class="navbar-brand text-light" href="#">Sabiduría de mis abuelos</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class=""><a class="nav-link text-light" href="../vista/cita/from_usuario.php">Registro Usuario <span class="sr-only">(current)</span></a></li>
+                        <li><a class="nav-link text-light" href="../vista/cita/agendar cita.php">Agendar Cita</a></li>
+                        <li><a class="nav-link text-light" href="../vista/cita/from_medicacion.php">Medicacion</a></li>
+                        <li><a class="nav-link text-light" href="../vista/cita/from_registromedicamento.php">Registro de medicamento</a></li>
+
+
+
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuario</a>
+                               
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a  href="../vista/consultas/consultaGeneral.php">General</a></li>
+                                        <li><a  href="../vista/cita/frombuscar.php">Especifica</a></li>
+                                    </ul>
+                                
+                            </li>
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cita</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a  href="../vista/consultas/consultaGeneralCita.php">General</a></li>
+                                <li><a href="../vista/cita/frombuscarCita.php">Especifica</a></li>
+                                
+                                
+                                </ul>
+                            </li>
+                           
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medicacion</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" role="presentation" href="../vista/consultas/consultaGeneralMedicacion.php">General</a></li>
+                                <li><a class="dropdown-item" role="presentation" href="../vista/cita/frombuscarMedicacion.php">Especifica</a></li>
+                              
+                                
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><a href="../vista/cerrar_session.php" class="btn nav-link text-light" role="button">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+ <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>
-
- 

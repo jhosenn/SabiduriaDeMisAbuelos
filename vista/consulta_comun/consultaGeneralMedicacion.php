@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../../assets/css/styles.css">
     
 </head>
+
+
+
 <body>
   <?php 
   include '../modulos/menu.php';
@@ -20,8 +23,8 @@
       <div class="card-header bg-info">
         <div class="row">
           <div class="col">
-           <div class="text-center text-light">
-            <h1>Listado De Los Usuarios</h1>
+           <div class="text-center text-white ">
+            <h1>Listado De Medicaciones</h1>
           </div>
         </div>
       </div>
@@ -31,52 +34,41 @@
           <thead>
             <tr>
               <th>Nombre</th>
-              <th>Género</th>
-              <th>Edad</th>
-              <th>RH</th>
-              <th>EPS</th>
-              <th>Area Protejida</th>
-              <th>Fecha Nacimiento</th>
-              <th>Diagnostico</th>
-              
+              <th>Medicamento</th>
+              <th>Cantidad</th>
+              <th>Frecuencia</th>
+              <th>Descripcion</th>
+             
             </tr>
           </thead>
           <tbody>
             <?php
-           $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
+            $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
                     die("Problemas con la conexión");
 
-                $registros=mysqli_query($conexion,"select * 
-                                        from usuario where nombrecompleto ='$_POST[datobuscar]'") or
+                $registros=mysqli_query($conexion,"SELECT f.*, m.nombre AS 'medicamento', u.nombrecompleto AS 'usuario' FROM formula f INNER JOIN medicamento m ON f.idmedicamento = m.idmedicamento
+                  INNER JOIN usuario u ON u.idusuario = f.idusuario ") or
                   die("Problemas en el select:".mysqli_error($conexion));
 
                 if ($reg=mysqli_fetch_array($registros))
             {
               echo "<tr>";
-              echo "<td>".$reg['nombrecompleto']."</td>";
-              echo "<td>". ($reg['sexo'] == "M" ? "Masculino" : "Femenino") ."</td>";
-              echo "<td>".$reg['edad']."</td>";
-              echo "<td>".$reg['rh']."</td>";
-              echo "<td>".$reg['eps']."</td>";
-              echo "<td>".$reg['areaprotegida']."</td>";
-              echo "<td>".$reg['fechanacimiento']."</td>";
-              echo "<td>".$reg['diagnostico']."</td>";
+              echo "<td>".$reg['usuario']."</td>";
+              echo "<td>".$reg['medicamento']."</td>";
+              echo "<td>".$reg['cantidad']."</td>";
+              echo "<td>".$reg['frecuencia']."</td>";
+              echo "<td>".$reg['observacion']."</td>";
+             
               
               echo "</tr>";
             }
-            else
-                {
-                  echo'<script>
-                alert ("Este Usuario no Existe");
-                window.history.go(-1);
-                </script>;';
-                }
+            
 
 
             mysqli_close($conexion);
 
 
-            echo'<a class="btn btn-default btn-light bg-purple" href="../registro.html" role="button">Volver al inicio</a>';
+            echo'<a class="btn btn-default bg-light" href="../registro.html" role="button">Volver al inicio</a>';
 
             ?>
           </tbody>
