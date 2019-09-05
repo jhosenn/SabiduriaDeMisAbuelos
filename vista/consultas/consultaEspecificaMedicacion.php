@@ -43,15 +43,16 @@
             $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
                     die("Problemas con la conexión");
 
-                $registros=mysqli_query($conexion,"select * 
-                                        from formula where idusuario ='$_POST[datobuscar]'") or
+                    $id = $_POST['datobuscar'] ?? 1;
+                $registros=mysqli_query($conexion,"SELECT f.*, m.nombre AS 'medicamento', u.nombrecompleto AS 'usuario' FROM formula f INNER JOIN medicamento m ON f.idmedicamento = m.idmedicamento
+                INNER JOIN usuario u ON u.idusuario = f.idusuario WHERE f.idusuario = $id") or
                   die("Problemas en el select:".mysqli_error($conexion));
 
                 if ($reg=mysqli_fetch_array($registros))
             {
               echo "<tr>";
-              echo "<td>".$reg['idusuario']."</td>";
-              echo "<td>".$reg['idmedicamento']."</td>";
+              echo "<td>".$reg['usuario']."</td>";
+              echo "<td>".$reg['medicamento']."</td>";
               echo "<td>".$reg['cantidad']."</td>";
               echo "<td>".$reg['frecuencia']."</td>";
               echo "<td>".$reg['observacion']."</td>";
