@@ -34,7 +34,7 @@
               <th>Medicamento</th>
               <th>Cantidad</th>
               <th>Frecuencia</th>
-              <th>Descripcion</th>
+              <th>Descripción</th>
              <th>Acciones</th>
             </tr>
           </thead>

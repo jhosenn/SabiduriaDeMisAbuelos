@@ -32,10 +32,10 @@
               <th>Género</th>
                <th>Edad</th>
               <th>RH</th>
-              <th>EPS</th>
-              <th>Area Protejida</th>
-              <th>Fecha Nacimiento</th>
-              <th>Diagnostico</th>
+              <th>Eps</th>
+              <th>Área Protegida</th>
+              <th>Fecha nacimiento</th>
+              <th>Diagnóstico</th>
               
             </tr>
           </thead>

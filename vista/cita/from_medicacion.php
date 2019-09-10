@@ -24,7 +24,7 @@
       <div class="card">
         <div class="card-header bg-purple">
           <div class="text-center text-light">
-            <h1>Medicacion</h1>
+            <h1>Medicación</h1>
           </div>
           <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
         </div>
@@ -60,9 +60,61 @@
                 ?>
               </select>
             </div>
-            <button class="btn btn-white" title="Agregar Nuevo Medicamento">
-             <h1><i class="icon-plus icon-">+</i></h1>
-            </button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">+</button>
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header bg-purple">
+                      <h5 class="modal-title text-white " id="exampleModalLabel">Agregar Nuevo Medicamento</h5>
+                      <button type="button " class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                       <form method="POST" action="guardarDatosRegistroMedicamento.php">
+                           
+                           <div class="card-body bg-light">
+                               <div class="row">
+                                   <div class="col-md-10">
+                                      <label>Nombre del medicamento</label>
+                                      <input type="text" name="nom_medi" id="nom_medi" class="form-control">
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="card-body bg-light ">
+                                     <div class="row">
+                                        <div class="col-md-10">
+                                            <label>Descripción</label><br>
+                                            <textarea name="descripcion" id="descripcion" cols="50" rows="4" placeholder="EJ: fecha de vencimiento, inyeccion,pasta">
+                                              
+                                            </textarea>
+                                        </div>
+                                    </div>
+                               </div>
+
+                               <div class="card-body bg-light">
+                               <div class="row">
+                                  <div class="col-md-6">
+                                      <label for="ddlEstado">Estado </label>
+                                      <select name="estado" id="estado" class="form-control">
+                                          <option value="Activo">Activó</option>
+                                          <option value="Inactivo">Inactivo</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              </div> 
+                     
+                    
+                    <div class="modal-footer bg-purple">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary" >Guardar</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
           <div class="row">
             <div class="col-md-5">
@@ -87,7 +139,7 @@
         
             <div class="row">
                  <div class="col-md-5">
-                  <label>Descripcion</label><br>
+                  <label>Descripción</label><br>
                   <textarea name="descripcion" cols="125" rows="3" placeholder="De que " >
                   </textarea>
                </div>

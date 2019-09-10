@@ -48,7 +48,7 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                     <ul class="navbar-nav mr-auto">
                         <li class=""><a class="nav-link text-light" href="../vista/cita/from_usuario.php">Registro Usuario <span class="sr-only">(current)</span></a></li>
                         <li><a class="nav-link text-light" href="../vista/cita/agendar cita.php">Agendar Cita</a></li>
-                        <li><a class="nav-link text-light" href="../vista/cita/from_medicacion.php">Medicacion</a></li>
+                        <li><a class="nav-link text-light" href="../vista/cita/from_medicacion.php">Medicación</a></li>
                         <li><a class="nav-link text-light" href="../vista/cita/from_registromedicamento.php">Registro de medicamento</a></li>
 
 
@@ -62,7 +62,7 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                                
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a  href="../vista/consultas/consultaGeneral.php">General</a></li>
-                                        <li><a  href="../vista/cita/frombuscar.php">Especifica</a></li>
+                                        <li><a  href="../vista/cita/frombuscar.php">Especifíca</a></li>
                                     </ul>
                                 
                             </li>
@@ -71,17 +71,17 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cita</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a  href="../vista/consultas/consultaGeneralCita.php">General</a></li>
-                                <li><a href="../vista/cita/frombuscarCita.php">Especifica</a></li>
+                                <li><a href="../vista/cita/frombuscarCita.php">Especifíca</a></li>
                                 
                                 
                                 </ul>
                             </li>
                            
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medicacion</a>
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medicación</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" role="presentation" href="../vista/consultas/consultaGeneralMedicacion.php">General</a></li>
-                                <li><a class="dropdown-item" role="presentation" href="../vista/cita/frombuscarMedicacion.php">Especifica</a></li>
+                                <li><a class="dropdown-item" role="presentation" href="../vista/cita/frombuscarMedicacion.php">Especifíca</a></li>
                               
                                 
                                 </ul>

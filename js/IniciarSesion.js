@@ -22,7 +22,7 @@ var datos = {
  	dataType: 'json'
  }).done(function (data) {
  	if (data == "OK") {
- 		alert('Sesion Iniciada');
+ 		alert('Sesión Iniciada');
  		window.location = '../inicio.php';
  	}else{
  		alert(data);

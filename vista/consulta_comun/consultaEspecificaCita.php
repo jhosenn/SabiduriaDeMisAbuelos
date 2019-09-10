@@ -32,7 +32,7 @@
             <tr>
               <th>Nombre</th>
               <th>Fecha</th>
-              <th>Direccion</th>
+              <th>Dirección</th>
               <th>Asunto</th>
               
             </tr>

@@ -36,15 +36,15 @@
               <th>N° Identificación</th>
               <th>Edad</th>
               <th>RH</th>
-              <th>EPS</th>
-              <th>Area Protejida</th>
+              <th>Eps</th>
+              <th>Ärea Protejida</th>
               <th>Fecha Nacimiento</th>
               <th>Origen</th>
               <th>Estado Civil</th>
               <th>Fecha de ingreso</th>
               <th>Estrato</th>
               <th>Escolaridad</th>
-              <th>Diagnostico</th>
+              <th>Diagnóstico</th>
               <th>Acudiente</th>
               <th>Teléfono acudiente</th>
               <th>Parentesco</th>

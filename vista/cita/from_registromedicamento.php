@@ -40,7 +40,7 @@
 		 	  	   <div class="card-body">
                        <div class="row">
                           <div class="col-md-10">
-	                            <label>Descripcion:</label><br>
+	                            <label>Descripción</label><br>
 	                            <textarea name="descripcion" id="descripcion" cols="125" rows="3" placeholder="EJ: fecha de vencimiento, inyeccion,pasta">
 	                            	
 	                            </textarea>
@@ -53,7 +53,7 @@
                     <div class="col-md-6">
                         <label for="ddlEstado">Estado </label>
                         <select name="estado" id="estado" class="form-control">
-                            <option value="Activo">Activo</option>
+                            <option value="Activo">Activó</option>
                             <option value="Inactivo">Inactivo</option>
                         </select>
                     </div>

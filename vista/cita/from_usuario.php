@@ -35,7 +35,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-10">
-                                                    <label>Nombre Completo:</label>
+                                                    <label>Nombre completo</label>
                                                     <input type="text" name="nombre" id="nombre" class="form-control">
                                                 </div>
                                             </div>
@@ -44,7 +44,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                     <div class="col-md-5">
-                                                        <label>TIPO DE DOCUMENTO:</label><br>
+                                                        <label>Tipo de documento</label><br>
                                                          <input type="radio" name="ti_doc" value="T.I" id="ti_doc" class="form"><label>T.I </label>
                                                          <input type="radio" name="ti_doc" id="ti_doc" value="R.C" class=""><label>R.C</label>
                                                           <input type="radio" name="ti_doc" value="C.C" id="ti_doc" class=""><label> C.C</label>
@@ -52,7 +52,7 @@
                                                           <input type="radio" name="ti_doc" value="PAS" id="ti_doc" class=""><label>PAS</label>
                                                     </div>
                                                      <div class="col-md-5">
-                                                        <label>SEXO:</label><br>
+                                                        <label>Sexo</label><br>
                                                          M <input type="radio" name="sexo" id="sexo" value="M">
                                                          F <input type="radio" name="sexo" id="sexo" value="F">
                                                     </div>
@@ -61,7 +61,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-10">
-                                                    <label>Numero de documento:</label>
+                                                    <label>Número de documento</label>
                                                     <input type="text" name="var_doc" id="var_doc" class="form-control">
                                                 </div>
                                             </div>
@@ -69,11 +69,11 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-5">
-                                                    <label>EDAD:</label>
+                                                    <label>Edad</label>
                                                     <input type="text" name="var_edad" id="var_edad" class="form-control">
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <label>RH:</label>
+                                                    <label>RH</label>
                                                     <input type="text" name="var_rh" id="var_rh" class="form-control">
                                                 </div>
                                             </div>
@@ -81,11 +81,11 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-5">
-                                                    <label>EPS:</label>
+                                                    <label>Eps</label>
                                                     <input type="text" name="var_eps" id="var_eps" class="form-control">
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <label>AREA PROTEGIDA:</label>
+                                                    <label>Área protegida</label>
                                                     <input type="text" name="a_proteg" id="a_proteg" class="form-control">
                                                 </div>
                                             </div>
@@ -95,11 +95,11 @@
                                         <div class="card-body">
                                             <div class="row">
                                                     <div class="col-md-5">
-                                                        <label>Fecha de Nacimiento:</label>
+                                                        <label>Fecha de nacimiento</label>
                                                         <input type="date" name="fec_nac" id="fec_nac" min="2000-01-01" class="form-control">
                                                     </div>
                                                     <div class="col-md-5">
-                                                        <label>Origen:</label>
+                                                        <label>Origen</label>
                                                         <input type="text" name="var_orig" id="var_orig" class="form-control">
                                                     </div>
                                             </div>
@@ -108,7 +108,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-10">
-                                                    <label>ESTADO CIVIL:</label><br>
+                                                    <label>Estado civil</label><br>
                                                     Casado(a) <input type="radio" name="es_civ" id="es_civ" 
                                                     value="Casado(a)">
                                                     Soltero(a) <input type="radio" name="es_civ" id="es_civ" value="Soltero(a)">
@@ -121,7 +121,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-10">
-                                                    <label>Fecha y Hora de Ingreso:</label>
+                                                    <label>Fecha y hora de ingresó</label>
                                                     <input type="datetime-local" name="hf_ing" id="hf_ing" class="form-control">
                                                 </div>
                                             </div>
@@ -131,7 +131,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                     <div class="col-md-5">
-                                                                <label>Estrato:</label>
+                                                                <label>Estrato</label>
                                                                 <select name="estrato" id="estrato" class="form-control" >
                                                                             <option value="Uno">1</option>
                                                                             <option value="Dos">2</option>
@@ -142,7 +142,7 @@
                                                                </select>
                                                    </div>
                                                     <div class="col-md-5">
-                                                        <label>ESCOLARIDAD:</label>
+                                                        <label>Escolaridad</label>
                                                         <input type="text" name="var_esc" id="var_esc" class="form-control">
                                                     </div>
                                             </div>
@@ -151,7 +151,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-10">
-                                                    <label>DIAGNOSTICOS:</label><br>
+                                                    <label>Diagnóstico</label><br>
                                                     <textarea name="diagnostico" cols="125" rows="3" placeholder="Describe el diagnostico del Usuario" >
                                                     </textarea>
                                                 </div>
@@ -167,7 +167,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-10">
-                                                    <label>Nombre Y Apellidos:</label>
+                                                    <label>Nombre y apellidos</label>
                                                     <input type="text" name="nombre_apellido" id="nombre_apellido" class="form-control">
                                                 </div>
                                             </div>
@@ -176,11 +176,11 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-5">
-                                                    <label>Telefono:</label>
+                                                    <label>Teléfono</label>
                                                     <input type="tel" name="var_tel" id="var_tel" class="form-control">
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <label>Parentesco:</label>
+                                                    <label>Parentesco</label>
                                                     <input type="text" name="var_par" id="var_par" class="form-control">
                                                 </div>
                                             </div>

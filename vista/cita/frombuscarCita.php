@@ -37,9 +37,9 @@
                                         <select name="datobuscar" id="datobuscar" class="form-control">
                                             <?php
                                                 $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos");
-                                                $registros=mysqli_query($conexion,"select * from agendarcita");
+                                                $registros=mysqli_query($conexion,"select * from usuario");
                                                 while($row = mysqli_fetch_object($registros)){
-                                                    echo '<option value="' . $row->nombreyapellido . '">' . $row->nombreyapellido . '</option>';
+                                                    echo '<option value="' . $row->nombrecompleto . '">' . $row->nombrecompleto . '</option>';
                                                 }
                                             ?>
                                         </select>

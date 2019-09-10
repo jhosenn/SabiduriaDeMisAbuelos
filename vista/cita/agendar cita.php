@@ -30,8 +30,17 @@
                 <div class="card-body">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Nombre Y Apellido:</label>
-                                        <input type="text" name="nom_apell" id="nom_apell" class="form-control">
+                                        <label>Nombre y apellido</label>
+                                        
+                                        <select name="nom_apell" id="nom_apell" class="form-control">
+                                            <?php
+                                                $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos");
+                                                $registros=mysqli_query($conexion,"select * from usuario");
+                                                while($row = mysqli_fetch_object($registros)){
+                                                    echo '<option value="' . $row->nombrecompleto . '">' . $row->nombrecompleto . '</option>';
+                                                }
+                                            ?>
+                                        </select>
                                 </div>
                         </div>
                 </div>
@@ -39,7 +48,7 @@
                 <div class="card-body">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Numero de documento:</label>
+                                        <label>Número de documento</label>
                                         <input type="text" name="num_doc" id="num_doc" class="form-control">
                                 </div>
                         </div>
@@ -50,7 +59,7 @@
                 <div class="card-body">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Fecha y Hora De La Cita:</label>
+                                        <label>Fecha y hora de la cita</label>
                                         <input type="datetime-local" name="hf_reg_for" id="hf_reg_for" class="form-control">
                                 </div>
                         </div>
@@ -58,7 +67,7 @@
                 <div class="card-body">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Direccion:</label>
+                                        <label>Dirección</label>
                                         <input type="text" name="dire" id="dire" class="form-control">
                                 </div>
                         </div>
@@ -71,7 +80,7 @@
              <div class="card-body">
                         <div class="row">
                                 <div class="col-md-4">
-                                        <label>Asunto:</label><br>
+                                        <label>Asunto</label><br>
                                         <textarea name="asunto" cols="125" rows="3" placeholder="De que " >
                                         </textarea>
                                 </div>

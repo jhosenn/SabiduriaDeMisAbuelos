@@ -37,7 +37,7 @@
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Usuario</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a href="../consulta_comun/consultaGeneral.php">General</a></li>
-                                <li><a href="../consulta_comun/fromBuscarComun.php">Especifica</a></li>
+                                <li><a href="../consulta_comun/fromBuscarComun.php">Especifíca</a></li>
                                
                                 </ul>
                             </li>
@@ -45,21 +45,21 @@
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Cita</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a href="../consulta_comun/consultaGeneralCita.php">General</a></li>
-                                <li><a href="../consulta_comun/fromBuscarCitaComun.php">Especifica</a></li>
+                                <li><a href="../consulta_comun/fromBuscarCitaComun.php">Especifíca</a></li>
                                
                                 </ul>
                             </li>
 
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Medicacion</a>
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Medicación</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a href="../consulta_comun/consultaGeneralMedicacion.php">General</a></li>
-                                <li><a href="../consulta_comun/fromBuscarMedicacionComun.php">Especifica</a></li>
+                                <li><a href="../consulta_comun/fromBuscarMedicacionComun.php">Especifíca</a></li>
                                
                                 </ul>
                             </li>
 
-                            <li><a href="../../index.html" class="btn text-light " role="button">Volver Al Menu</a></li>
+                            <li><a href="../../index.html" class="btn text-light " role="button">Volver Al Menú</a></li>
                         </ul>
                     </div>
     </nav>

@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col">
            <div class="text-center text-white ">
-            <h1>Listado De Medicacione</h1>
+            <h1>Listado De Medicación</h1>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
               <th>Medicamento</th>
               <th>Cantidad</th>
               <th>Frecuencia</th>
-              <th>Descripcion</th>
+              <th>Descripción</th>
              
             </tr>
           </thead>

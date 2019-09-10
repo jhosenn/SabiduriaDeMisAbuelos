@@ -19,7 +19,7 @@
 					<div class="card">
                     <div class="card-header bg-info "  >
                         <div class="text-center text-light">
-                            <h1>Buscar Medicacion</h1>
+                            <h1>Buscar Medicación</h1>
                         </div>
                         <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
                     </div>
