@@ -31,6 +31,7 @@
         <table class="table table-striped text-white">
           <thead>
             <tr>
+              <th></th>
               <th>Nombre</th>
               <th>N° Identificación</th>
               <th>Fecha</th>
@@ -45,27 +46,29 @@
                           die("Problemas con la conexión");
 
                       $registros=mysqli_query($conexion,"select * 
-                                              from agendarcita ") or
+                                              from agendarcita WHERE DATE(fecha_hora) >= DATE(NOW()) ORDER BY DATE(fecha_hora) ASC ") or
                         die("Problemas en el select:".mysqli_error($conexion));
 
-                      while ($reg=mysqli_fetch_array($registros))         
+                while ($reg=mysqli_fetch_array($registros))         
                 {
 
                   $fecha1 = new DateTime("now", new DateTimeZone("America/Bogota"));;
                   $fecha2 = new DateTime($reg['fecha_hora'], new DateTimeZone("America/Bogota"));
-                  $diff = date_diff($fecha1, $fecha2);
-                  $total = $diff->format('%d Days %h Hours %i Minutos');
-                  var_dump($fecha1);
-                  echo "<br>";
-                  echo "<br>";
-                  var_dump($fecha2);
-                  echo "<br>";
-                  echo "<br>";
-                  var_dump($total);
-                  echo "<br>";
-                  echo "<br>";
-                  continue;
+                  $diff = $fecha1->diff($fecha2); // date_diff($fecha1, $fecha2);
+                  $dias = (int)$diff->format('%d');
+
+                  $color = '';
+                  if($dias == 0){
+                    // aplicamos el color verde
+                    $color = 'danger';
+                  }else if($dias > 0 && $dias <= 5){
+                    $color = 'warning';
+                  }else if($dias > 5){
+                    $color = 'success';
+                  }
+
                   echo "<tr>";
+                  echo "<td><div class='badge badge-" . $color . "'>" . $dias . " días restantes</div></td>";
                   echo "<td>".$reg['nombreyapellido']."</td>";
                   echo "<td>".$reg['numerodocumento']."</td>";
                   echo "<td>".$reg['fecha_hora']."</td>";
