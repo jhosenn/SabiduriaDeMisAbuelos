@@ -49,7 +49,7 @@
                   INNER JOIN usuario u ON u.idusuario = f.idusuario WHERE f.idusuario = $id") or
                   die("Problemas en el select:".mysqli_error($conexion));
 
-                if ($reg=mysqli_fetch_array($registros))
+                while ($reg=mysqli_fetch_array($registros))
                 {
                   echo "<tr>";
                   echo "<td>".$reg['usuario']."</td>";
@@ -61,13 +61,7 @@
                   
                   echo "</tr>";
                 }
-                else
-                {
-                  echo'<script>
-                alert ("Esta Medicacion no Existe");
-                window.history.go(-1);
-                </script>;';
-                }
+                
 
 
             mysqli_close($conexion);

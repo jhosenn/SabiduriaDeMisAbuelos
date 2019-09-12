@@ -87,8 +87,17 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                                 </ul>
                             </li>
                             </ul>
+                            
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" role="presentation" href="#">Cambiar contraseña</a></li>
+                                <li><a class="dropdown-item" role="presentation" href="../cerrar_session.php">Cerrar</a></li>
+                              
+                                
+                                </ul>
+                            </li>
                         </li>
-                        <li><a href="../vista/cerrar_session.php" class="btn nav-link text-light" role="button">Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </nav>

@@ -15,14 +15,7 @@
 
 $conexion = mysqli_connect("localhost","root","","sabiduriademisabuelos")or die("Problema con la conexion");
 
-$verificar_numerodocumento =  mysqli_query($conexion,"SELECT * FROM agendarcita WHERE numerodocumento = '$_POST[num_doc]'");
-if(mysqli_num_rows($verificar_numerodocumento) > 0){
-	echo'<script>
-	alert ("El usuario ya esta registrado");
-	window.history.go(-1);
-	</script>';
-	exit;
-}
+
 
 
 

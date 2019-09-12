@@ -45,12 +45,28 @@
                       die("Problemas con la conexión");
 
                   $registros=mysqli_query($conexion,"select * 
-                                          from agendarcita where nombreyapellido ='$_POST[datobuscar]'") or
+                                          from agendarcita where nombreyapellido ='$_POST[datobuscar]' AND DATE(fecha_hora) >= DATE(NOW()) ORDER BY DATE(fecha_hora) ASC") or
                     die("Problemas en el select:".mysqli_error($conexion));
 
-                  if ($reg=mysqli_fetch_array($registros))         
+                  while ($reg=mysqli_fetch_array($registros))         
                 {
+                 $fecha1 = new DateTime("now", new DateTimeZone("America/Bogota"));;
+                  $fecha2 = new DateTime($reg['fecha_hora'], new DateTimeZone("America/Bogota"));
+                  $diff = $fecha1->diff($fecha2); // date_diff($fecha1, $fecha2);
+                  $dias = (int)$diff->format('%d');
+
+                  $color = '';
+                  if($dias == 0){
+                    // aplicamos el color verde
+                    $color = 'danger';
+                  }else if($dias > 0 && $dias <= 5){
+                    $color = 'warning';
+                  }else if($dias > 5){
+                    $color = 'success';
+                  }
+
                   echo "<tr>";
+                  echo "<td><div class='badge badge-" . $color . "'>" . $dias . " días restantes</div></td>";
                   echo "<td>".$reg['nombreyapellido']."</td>";
                   echo "<td>".$reg['numerodocumento']."</td>";
                   echo "<td>".$reg['fecha_hora']."</td>";
@@ -59,22 +75,14 @@
                   echo "
                     <td>
                       <div class='btn-group'>
-                      
-                      <a href='#'>  <button class='btn btn-warning'>Modificar</button></a>
-                        
-                       <a href='#'> <button class='btn btn-danger'>Eliminar</button></a>
+                       <a href='#'> <button class='btn btn-warning'>Modificar</button></a>
+                      <a href='#'>  <button class='btn btn-danger'>Eliminar</button></a>
                       </div>
                     </td>
                   ";
                   echo "</tr>";
            }
-           else
-                  {
-                    echo'<script>
-                  alert ("No Hay Cita registrada");
-                  window.history.go(-1);
-                  </script>;';
-                  }
+           
 
            
             mysqli_close($conexion);

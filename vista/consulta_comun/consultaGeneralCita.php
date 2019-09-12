@@ -39,22 +39,48 @@
             </thead>
             <tbody>
               <?php
-              $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
-              die("Problemas con la conexión");
+             $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
+                          die("Problemas con la conexión");
 
-              $registros=mysqli_query($conexion,"select * 
-                from agendarcita ") or
-              die("Problemas en el select:".mysqli_error($conexion));
+                      $registros=mysqli_query($conexion,"select * 
+                                              from agendarcita WHERE DATE(fecha_hora) >= DATE(NOW()) ORDER BY DATE(fecha_hora) ASC ") or
+                        die("Problemas en el select:".mysqli_error($conexion));
 
-              while ($reg=mysqli_fetch_array($registros))
-              {
-                echo "<tr>";
-                echo "<td>".$reg['nombreyapellido']."</td>";
-                echo "<td>".$reg['fecha_hora']."</td>";
-                echo "<td>".$reg['direccion']."</td>";
-                echo "<td>".$reg['asunto']."</td>";
-                
-                echo "</tr>";
+                while ($reg=mysqli_fetch_array($registros))         
+                {
+
+                  $fecha1 = new DateTime("now", new DateTimeZone("America/Bogota"));;
+                  $fecha2 = new DateTime($reg['fecha_hora'], new DateTimeZone("America/Bogota"));
+                  $diff = $fecha1->diff($fecha2); // date_diff($fecha1, $fecha2);
+                  $dias = (int)$diff->format('%d');
+
+                  $color = '';
+                  if($dias == 0){
+                    // aplicamos el color verde
+                    $color = 'danger';
+                  }else if($dias > 0 && $dias <= 5){
+                    $color = 'warning';
+                  }else if($dias > 5){
+                    $color = 'success';
+                  }
+
+                  echo "<tr>";
+                  echo "<td><div class='badge badge-" . $color . "'>" . $dias . " días restantes</div></td>";
+                  echo "<td>".$reg['nombreyapellido']."</td>";
+                  echo "<td>".$reg['numerodocumento']."</td>";
+                  echo "<td>".$reg['fecha_hora']."</td>";
+                  echo "<td>".$reg['direccion']."</td>";
+                  echo "<td>".$reg['asunto']."</td>";
+                  echo "
+                    <td>
+                      <div class='btn-group'>
+                       <a href='#'> <button class='btn btn-warning'>Modificar</button></a>
+                      <a href='#'>  <button class='btn btn-danger'>Eliminar</button></a>
+                      </div>
+                    </td>
+                  ";
+                  echo "</tr>";
+
               }
 
               mysqli_close($conexion);
