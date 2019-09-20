@@ -18,7 +18,7 @@
     
     <br><br>
     <div class="container bg-light"><br>
-        <form method="POST" action="../consultas/consultaEspecificaMedicacion.php">
+        <form method="POST" action="../../controlador/Medicacion/consultaEspecificaMedicacion.php">
             <div class="card">
                 <div class="card-header bg-purple "  >
                     <div class="text-center text-light">

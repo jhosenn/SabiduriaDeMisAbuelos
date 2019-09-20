@@ -10,7 +10,7 @@
 </head>
 <body>
   <?php 
-   include '../modulos/menu_administrador.php';
+   include '../../vista/modulos/menu_administrador.php';
    ?>
 
 
@@ -22,7 +22,7 @@
         <div class="row">
           <div class="col">
            <div class="text-center text-light ">
-            <h1>Listado De Cita</h1>
+            <h1>Listado De Las Citas</h1>
           </div>
         </div>
       </div>
@@ -31,6 +31,7 @@
         <table class="table table-striped text-white">
           <thead>
             <tr>
+              <th></th>
               <th>Nombre</th>
               <th>N° Identificación</th>
               <th>Fecha</th>
@@ -42,15 +43,16 @@
           <tbody>
             <?php
           $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
-                      die("Problemas con la conexión");
+                          die("Problemas con la conexión");
 
-                  $registros=mysqli_query($conexion,"select * 
-                                          from agendarcita where nombreyapellido ='$_POST[datobuscar]' AND DATE(fecha_hora) >= DATE(NOW()) ORDER BY DATE(fecha_hora) ASC") or
-                    die("Problemas en el select:".mysqli_error($conexion));
+                      $registros=mysqli_query($conexion,"select * 
+                                              from agendarcita WHERE DATE(fecha_hora) >= DATE(NOW()) ORDER BY DATE(fecha_hora) ASC ") or
+                        die("Problemas en el select:".mysqli_error($conexion));
 
-                  while ($reg=mysqli_fetch_array($registros))         
+                while ($reg=mysqli_fetch_array($registros))         
                 {
-                 $fecha1 = new DateTime("now", new DateTimeZone("America/Bogota"));;
+
+                  $fecha1 = new DateTime("now", new DateTimeZone("America/Bogota"));;
                   $fecha2 = new DateTime($reg['fecha_hora'], new DateTimeZone("America/Bogota"));
                   $diff = $fecha1->diff($fecha2); // date_diff($fecha1, $fecha2);
                   $dias = (int)$diff->format('%d');
@@ -75,20 +77,19 @@
                   echo "
                     <td>
                       <div class='btn-group'>
-                       <a href='#'> <button class='btn btn-warning'>Modificar</button></a>
-                      <a href='#'>  <button class='btn btn-danger'>Eliminar</button></a>
+                       <a href='modificar.cita.php?idCita=" . $reg['idcita'] . "'> <button class='btn btn-warning'>Modificar</button></a>
+                      <a href='eliminar.cita.php?idCita=" . $reg['idcita'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
                       </div>
                     </td>
                   ";
                   echo "</tr>";
            }
-           
 
            
             mysqli_close($conexion);
 
 
-            echo'<a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>';
+            echo'<a class="btn btn-default btn-light" href="../../vista/inicio.php" role="button">Volver al inicio</a>';
 
             ?>
           </tbody>
@@ -98,7 +99,7 @@
     </div>
   </div>  <br>       
 
-  <script src="../../assets/js/jquery.min.js"></script>
-  <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

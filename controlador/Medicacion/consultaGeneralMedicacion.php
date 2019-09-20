@@ -9,7 +9,7 @@
 </head>
 <body>
   <?php 
-  include '../modulos/menu_administrador.php';
+  include '../../vista/modulos/menu_administrador.php';
   ?>
 
 
@@ -72,7 +72,7 @@
             mysqli_close($conexion);
 
 
-            echo'<a class="btn btn-default bg-light" href="../inicio.php" role="button">Volver al inicio</a>';
+            echo'<a class="btn btn-default bg-light" href="../../vista/inicio.php" role="button">Volver al inicio</a>';
 
             ?>
           </tbody>

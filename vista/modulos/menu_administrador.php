@@ -46,10 +46,10 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li ><a class="nav-link text-light" href="../cita/from_usuario.php">Registro Usuario <span class="sr-only">(current)</span></a></li>
-                        <li><a class="nav-link text-light" href="../cita/agendar cita.php">Agendar Cita</a></li>
-                        <li><a class="nav-link text-light" href="../cita/from_medicacion.php">Medicación</a></li>
-                        <li><a class="nav-link text-light" href="../cita/from_registromedicamento.php">Registro de medicamento</a></li>
+                        <li ><a class="nav-link text-light" href="../../vista/Formularios/from_usuario.php">Registro Usuario <span class="sr-only">(current)</span></a></li>
+                        <li><a class="nav-link text-light" href="../../vista/Formularios/agendar cita.php">Agendar Cita</a></li>
+                        <li><a class="nav-link text-light" href="../../vista/Formularios/from_medicacion.php">Medicación</a></li>
+                        <li><a class="nav-link text-light" href="../../vista/Formularios/from_registromedicamento.php">Registro de medicamento</a></li>
 
 
 
@@ -60,8 +60,8 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                             <li class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuario</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a  href="../consultas/consultaGeneral.php">General</a></li>
-                                        <li><a  href="../cita/frombuscar.php">Especifíca</a></li>
+                                        <li><a  href="../../controlador/Usuario/consultaGeneral.php">General</a></li>
+                                        <li><a  href="../../vista/Formularios/frombuscar.php">Especifíca</a></li>
                                     </ul>
                                 
                                 
@@ -71,8 +71,8 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                             <li class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cita</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a  href="../consultas/consultaGeneralCita.php">General</a></li>
-                                <li><a href="../cita/frombuscarCita.php">Especifíca</a></li>
+                                <li><a  href="../../controlador/Cita/consultaGeneralCita.php">General</a></li>
+                                <li><a href="../../vista/Formularios/frombuscarCita.php">Especifíca</a></li>
                                 
                                 
                                 </ul>
@@ -81,8 +81,8 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                             <li class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medicación</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" role="presentation" href="../consultas/consultaGeneralMedicacion.php">General</a></li>
-                                <li><a class="dropdown-item" role="presentation" href="../cita/frombuscarMedicacion.php">Especifíca</a></li>
+                                <li><a class="dropdown-item" role="presentation" href="../../controlador/Medicacion/consultaGeneralMedicacion.php">General</a></li>
+                                <li><a class="dropdown-item" role="presentation" href="../../vista/Formularios/frombuscarMedicacion.php">Especifíca</a></li>
                               
                                 
                                 </ul>
@@ -92,7 +92,7 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                             <li class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" role="presentation" href="#">Cambiar contraseña</a></li>
+                                <li><a class="dropdown-item" role="presentation" href="../cita/from_cambio_contraseña.php">Cambiar contraseña</a></li>
                                 <li><a class="dropdown-item" role="presentation" href="../cerrar_session.php">Cerrar</a></li>
                               
                                 

@@ -8,32 +8,29 @@
     <link rel="stylesheet" href="../../assets/css/styles.css">
 
 </head>
-    
 <body>
-    
-     <?php 
+    <?php 
     include '../modulos/menu_administrador.php';
      ?>
-       
+  
+  
 
 
-        <br><br>
+     <br><br>
 		<div class="container bg-light"><br>
-			<form method="POST" action="../consultas/consultaEspecificaCita.php">
+			<form method="POST" action="../../controlador/Usuario/consultaEspecifica.php">
 					<div class="card">
-                    <div class="card-header bg-purple">
+                    <div class="card-header bg-purple "  >
                         <div class="text-center text-light">
-                            <h1>Buscar Cita</h1>
+                            <h1>Buscar Usuario</h1>
                         </div>
                         <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
-                        
-                        
                     </div>
             </div>
                 <div class="card-body bg-light">
                         <div class="row">
                                 <div class="col-md-10">
-                                        <label>Nombre Del Paciente</label>
+                                        <label> Nombre Del Paciente</label>
                                         <select name="datobuscar" id="datobuscar" class="form-control">
                                             <?php
                                                 $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos");
@@ -42,7 +39,7 @@
                                                     echo '<option value="' . $row->nombrecompleto . '">' . $row->nombrecompleto . '</option>';
                                                 }
                                             ?>
-                                        </select>
+                                        </select>            
                                 </div>
                         </div>
                 </div>
@@ -63,6 +60,7 @@
 
 
 		</div>
+
         <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
 

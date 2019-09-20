@@ -20,7 +20,7 @@
   <br><br>
 
   <div class="container bg-light"><br>
-    <form method="POST" action="guardarDatosDeMedicacion.php">
+    <form method="POST" action="../../controlador/Medicacion/guardarDatosDeMedicacion.php">
       <div class="card">
         <div class="card-header bg-purple">
           <div class="text-center text-light">
@@ -28,6 +28,7 @@
           </div>
           <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
         </div>
+     </div>    
         <div class="card-body">
           <div class="row">
             <div class="col-md-10">
@@ -62,13 +63,16 @@
             </div>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">+</button>
           </div>
-        </div>
+        
 
         <div class="row">
           <div class="col-md-5">
             <label>Cantidad</label>
             <input type="text" name="cant" id="cant" class="form-control">
           </div>
+
+
+
 
 
           <div class="col-md-5">
@@ -93,20 +97,21 @@
         </div>
 
       </div>
-    </div>   
-  </div>
+      </div>
+      
+  
 
 
 
-  <div class="card-footer bg-purple">
-   <div class="text-center ">
-     <div class="btn-group">
-      <input type="submit" name="Guardar" value="Guardar" class="btn btn-light">&nbsp; 
-      <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
-    </div>
-  </div>
-</div><br>
-</form>
+       <div class="card-footer bg-purple">
+           <div class="text-center ">
+             <div class="btn-group">
+              <input type="submit" name="Guardar" value="Guardar" class="btn btn-light">&nbsp; 
+              <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
+            </div>
+          </div>
+      </div><br>
+    </form>
 </div>	 
 
 <script src="../../assets/js/jquery.min.js"></script>
@@ -121,7 +126,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form method="POST" action="guardarDatosRegistroMedicamento.php">
+      <form method="POST" action="../../controlador/Medicamento/guardarDatosRegistroMedicamento.php">
         <div class="modal-body">
           <div class="card-body bg-light">
             <div class="row">

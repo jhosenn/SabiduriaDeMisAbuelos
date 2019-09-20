@@ -19,7 +19,7 @@
 		 ?><br><br>
 
 		 <div class="container bg-light "><br>
-		 	  <form method="POST" action="guardarDatosRegistroMedicamento.php">
+		 	  <form method="POST" action="../../controlador/medicamento/guardarDatosRegistroMedicamento.php">
 		 	  	   <div class="card">
 		 	  	   	   <div class="card-header bg-purple">
 		 	  	   	       <div class="text-center text-light">

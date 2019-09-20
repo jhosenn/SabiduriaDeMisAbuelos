@@ -9,7 +9,7 @@
 </head>
 <body>
   <?php 
-  include '../modulos/menu_administrador.php';
+  include '../../vista/modulos/menu_administrador.php';
   ?>
 
 
@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col">
            <div class="text-center text-white ">
-            <h1>Listado De Los Usuarios</h1>
+            <h1>Listado Del Usuario</h1>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
               <th>Edad</th>
               <th>RH</th>
               <th>Eps</th>
-              <th>Área Protejida</th>
+              <th>Ärea Protejida</th>
               <th>Fecha Nacimiento</th>
               <th>Origen</th>
               <th>Estado Civil</th>
@@ -54,13 +54,13 @@
           <tbody>
             <?php
             $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
-            die("Problemas con la conexión");
+                    die("Problemas con la conexión");
 
-            $registros=mysqli_query($conexion,"select * 
-              from usuario ") or
-            die("Problemas en el select:".mysqli_error($conexion));
+                $registros=mysqli_query($conexion,"select * 
+                                        from usuario where nombrecompleto ='$_POST[datobuscar]'") or
+                  die("Problemas en el select:".mysqli_error($conexion));
 
-            while ($reg=mysqli_fetch_array($registros))
+                if ($reg=mysqli_fetch_array($registros))
             {
               echo "<tr>";
               echo "<td>".$reg['nombrecompleto']."</td>";
@@ -91,12 +91,19 @@
               ";
               echo "</tr>";
             }
+            else
+                {
+                  echo'<script>
+                alert ("Este Usuario no Existe");
+                window.history.go(-1);
+                </script>;';
+                }
 
 
             mysqli_close($conexion);
 
 
-            echo'<a class="btn btn-default bg-light" href="../inicio.php" role="button">Volver al inicio</a>';
+            echo'<a class="btn btn-default bg-light" href="../../vista/inicio.php" role="button">Volver al inicio</a>';
 
             ?>
           </tbody>
