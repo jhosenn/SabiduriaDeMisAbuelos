@@ -30,10 +30,12 @@
         <table class="table table-striped text-white">
           <thead>
             <tr>
+              <th></th>
               <th>Nombre</th>
               <th>Fecha</th>
               <th>Dirección</th>
               <th>Asunto</th>
+              <th>Acciones</th>
               
             </tr>
           </thead>
@@ -66,7 +68,7 @@
                   echo "<tr>";
                   echo "<td><div class='badge badge-" . $color . "'>" . $dias . " días restantes</div></td>";
                   echo "<td>".$reg['nombreyapellido']."</td>";
-                  echo "<td>".$reg['numerodocumento']."</td>";
+                 
                   echo "<td>".$reg['fecha_hora']."</td>";
                   echo "<td>".$reg['direccion']."</td>";
                   echo "<td>".$reg['asunto']."</td>";

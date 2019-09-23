@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>SABIDURIA DE MIS ABUELOS</title>
     
-     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap2.min.css">
     <link rel="stylesheet" href="../../assets/css/all.min.css">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css"  id="bootstrap-css">
 

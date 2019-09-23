@@ -87,6 +87,15 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                                 
                                 </ul>
                             </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medicamento</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" role="presentation" href="../../controlador/medicamento/consultaGeneralMedicamento.php">General</a></li>
+                                
+                              
+                                
+                                </ul>
+                            </li>
                             </ul>
                             
                             <li class="dropdown">
