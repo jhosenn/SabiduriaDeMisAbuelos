@@ -31,6 +31,7 @@
         <table class="table table-striped text-white">
           <thead>
             <tr>
+              <th></th>
               <th>Nombre</th>
               <th>N° Identificación</th>
               <th>Fecha</th>

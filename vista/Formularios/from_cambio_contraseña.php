@@ -22,6 +22,8 @@
      		<?php 
      			 if(isset($_POST['editar'])){
     		require"../../modelo/conexion.php";
+
+            $mysqli = new mysqli("localhost", "root", "", "sabiduriademisabuelos");
     		
     	 $passActual = $mysqli->real_escape_string($_POST['passactual']);
     	 $pass1 = $mysqli->real_escape_string($_POST['pass1']);
@@ -31,23 +33,35 @@
     	 $pass1 = md5($pass1);
     	 $pass2 = md5($pass2);
 
-    	 $sqlA = $mysqli->query("SELECT contrasena FROM usuarios WHERE id ='".$_SESSION['id']."'");
-    	 $rowA = $sqlA->fetch_array();
+    	 $sqlA = $mysqli->query("SELECT contrasena FROM usuarios WHERE idUsuario = '".$_SESSION['idUsuario']."'");
+    	 $rowA = mysqli_fetch_array($sqlA);
 
-    	 if($rowA['contrasena'] == $passActual){
-    	 	if($pass1 == $pass2){
-    	 		$update = $mysqli->query("UPDATE usuarios SET contrasena = '$pass1' WHERE id ='".$_SESSION['id']."'");
-    	 		if($update){
-    	 			echo"se ha actualizado tu contraseña";
-    	 		}
-    	 		else{
-    	 			echo"las dos contraseñas no coinciden";
-    	 		}
-    	 	}
-    	 	else{
-    	 		echo"Tu contraseña actual no coincide";
-    	 	}
-    	 }
+         if($rowA['contrasena'] == $passActual){
+
+            if($pass1 == $pass2){
+                $update = $mysqli->query("UPDATE usuarios SET contrasena = '$pass1' WHERE idUsuario = '".$_SESSION['idUsuario']."'");
+                if($update){
+                    echo'<script>
+                            alert ("La contraseña se ha modificada con exito");
+                            window.history.go(-1);
+                        </script>';
+                }    
+
+            }else{
+                echo'<script>
+                        alert ("Las contraseñas no coinciden");
+                        window.history.go(-1);
+                    </script>';
+            }
+
+         }else{
+            echo'<script>
+                    alert ("La contraseña actual no coincide");
+                    window.history.go(-1);
+                </script>';
+         }
+
+    	 
     }
      		 ?>
      			     	   
