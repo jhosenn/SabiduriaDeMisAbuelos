@@ -23,7 +23,7 @@
                                              (`direccion`)
                                 VALUES (:nombreyapellido);(:numerodocumento)(:fecha_hora)(:asunto)
                                 (:direccion)");
-            $stmt->bindParam('nombreyapellido', $nombrecompleto, 'numerodocumento', $identificacion, 'fecha_hora', $fechahora, 'asunto', $asunto, 'direccion', $direccion,  PDO::PARAM_STR);
+            $stmt->bindParam('nombreyapellido', $nombrecompleto, 'numerodocumento', $num_doc, 'fecha_hora', $hf_reg_for, 'asunto', $asunto, 'direccion', $dire,  PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
@@ -32,18 +32,22 @@
             }
         }
         
-        function Modificarcita($idcita, $nombrecompleto, $identificacion, $fechahora, $asunto, $direccion){
+        function Modificarcita($idcita, $nombrecompleto, $num_doc, $hf_reg_for, $asunto, $dire){
             $conexion = new Conexion();
 
             $stmt = $conexion->prepare("UPDATE `agendarcita`
-                                        SET nombreEditorial = :nombreEditorial
+                                        SET nombreyapellido = :nombreyapellido,
+                                        numerodocumento = :numerodocumento,
+                                        fecha_hora = :fecha_hora,
+                                        asunto = :asunto,
+                                        direccion = :direccion
                                         WHERE idcita = :idcita");
             $stmt->bindParam(':nombreyapellido', $nombrecompleto, PDO::PARAM_STR);
             $stmt->bindParam(':idcita', $idcita, PDO::PARAM_INT);
-            $stmt->bindParam(':numerodocumento', $identificacion, PDO::PARAM_STR);
-            $stmt->bindParam(':fecha_hora', $fechahora, PDO::PARAM_STR);
+            $stmt->bindParam(':numerodocumento', $num_doc, PDO::PARAM_STR);
+            $stmt->bindParam(':fecha_hora', $hf_reg_for, PDO::PARAM_STR);
             $stmt->bindParam(':asunto', $asunto, PDO::PARAM_STR);
-            $stmt->bindParam(':direccion', $direccion, PDO::PARAM_STR);
+            $stmt->bindParam(':direccion', $dire, PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
