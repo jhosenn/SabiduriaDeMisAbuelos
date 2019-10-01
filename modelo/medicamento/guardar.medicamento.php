@@ -1,29 +1,30 @@
 <?php
 
     require_once  dirname(__DIR__, 2) . '/modelo/conexion.php';
+    class Modelomedicamento{
 
-    class ModeloEditorial{
-
-        function ConsultarTodoEditorial(){
+        function ConsultarTodomedicamento(){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("SELECT * FROM editorial");
+            $stmt = $conexion->prepare("SELECT * FROM medicamento");
             $stmt->execute();
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
         }
 
-        function GuardarEditorial($nombreEditorial){
+        function Guardarmedicamento($nombremedicamento){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("INSERT INTO `editorial`
-                                            (`nombreEditorial`)
-                                VALUES (:nombreEditorial);");
-            $stmt->bindParam(':nombreEditorial', $nombreEditorial, PDO::PARAM_STR);
+            $stmt = $conexion->prepare("INSERT INTO `medicamento`
+                                            (`nombre`)
+                                             (`descripcion`)
+                                             (`estado`)
+                                VALUES (:nombre);(:descripcion)(:estado)");
+            $stmt->bindParam('nombre', $nom_medi, 'descripcion', $descripcion, 'estado', $estado,  PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL GUARDAR LA EDITORIAL";
+                return "ERROR AL GUARDAR MEDICAMENTO";
             }
         }
         
@@ -43,17 +44,17 @@
             }
         }
 
-        function EliminarEditorial($idEditorial){
+        function Eliminarmedicamento($idmedicamento){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("DELETE FROM `editorial`
-                                        WHERE idEditorial = :idEditorial");
-            $stmt->bindParam(':idEditorial', $idEditorial, PDO::PARAM_INT);
+            $stmt = $conexion->prepare("DELETE FROM `medicamento`
+                                        WHERE idmedicamento = :idmedicamento");
+            $stmt->bindParam(':idmedicamento', $idmedicamento, PDO::PARAM_INT);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL MODIFICAR LA EDITORIAL";
+                return "ERROR AL MODIFICAR LOS MEDICAMENTOS";
             }
         }
 

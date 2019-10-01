@@ -85,8 +85,8 @@
                 <td>
                   <div class='btn-group'>
                    <a href='#'> <button class='btn btn-warning'>Modificar</button></a>
-                   <a href='#'> <button class='btn btn-danger'>Eliminar</button></a>
-                  </div>
+                  <a href='eliminar.usuarioEs.php?idusuario=" . $reg['idusuario'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
+                   </div>
                 </td>
               ";
               echo "</tr>";

@@ -2,58 +2,67 @@
 
     require_once  dirname(__DIR__, 2) . '/modelo/conexion.php';
 
-    class ModeloEditorial{
+    class Modelomedicacion{
 
-        function ConsultarTodoEditorial(){
+        function ConsultarTodomedicacion(){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("SELECT * FROM editorial");
+            $stmt = $conexion->prepare("SELECT * FROM formula");
             $stmt->execute();
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
         }
 
-        function GuardarEditorial($nombreEditorial){
+        function Guardarmedicacion($nombrecita){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("INSERT INTO `editorial`
-                                            (`nombreEditorial`)
-                                VALUES (:nombreEditorial);");
-            $stmt->bindParam(':nombreEditorial', $nombreEditorial, PDO::PARAM_STR);
+            $stmt = $conexion->prepare("INSERT INTO `formula`
+                                            (`idusuario`)
+                                             (`idmedicamento`)
+                                             (`cantidad`)
+                                             (`frecuencia`)
+                                             (`observacion`)
+                                VALUES (:idusuario);(:idmedicamento)(:cantidad)(:frecuencia)
+                                (:observacion)");
+            $stmt->bindParam('idusuario', $usua, 'idmedicamento', $medica, 'cantidad', $cant, 'frecuencia', $fre, 'observacion', $descripcion,  PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL GUARDAR LA EDITORIAL";
+                return "ERROR AL GUARDAR MEDICACIÓN";
             }
         }
         
-        function ModificarEditorial($idEditorial, $nombreEditorial){
+        function Modificarmedicacion($idformula, $nombrecompleto, $identificacion, $fechahora, $asunto, $direccion){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("UPDATE `editorial`
+            $stmt = $conexion->prepare("UPDATE `formula`
                                         SET nombreEditorial = :nombreEditorial
-                                        WHERE idEditorial = :idEditorial");
-            $stmt->bindParam(':nombreEditorial', $nombreEditorial, PDO::PARAM_STR);
-            $stmt->bindParam(':idEditorial', $idEditorial, PDO::PARAM_INT);
+                                        WHERE idformula = :idformula");
+            $stmt->bindParam(':nombreyapellido', $nombrecompleto, PDO::PARAM_STR);
+            $stmt->bindParam(':idcita', $idcita, PDO::PARAM_INT);
+            $stmt->bindParam(':numerodocumento', $identificacion, PDO::PARAM_STR);
+            $stmt->bindParam(':fecha_hora', $fechahora, PDO::PARAM_STR);
+            $stmt->bindParam(':asunto', $asunto, PDO::PARAM_STR);
+            $stmt->bindParam(':direccion', $direccion, PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL MODIFICAR LA EDITORIAL";
+                return "ERROR AL MODIFICAR LA MEDICACIÓN";
             }
         }
 
-        function EliminarEditorial($idEditorial){
+        function Eliminarmedicacion($idformula){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("DELETE FROM `editorial`
-                                        WHERE idEditorial = :idEditorial");
-            $stmt->bindParam(':idEditorial', $idEditorial, PDO::PARAM_INT);
+            $stmt = $conexion->prepare("DELETE FROM `formula`
+                                        WHERE idformula = :idformula");
+            $stmt->bindParam(':idformula', $idformula, PDO::PARAM_INT);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL MODIFICAR LA EDITORIAL";
+                return "ERROR AL MODIFICAR LA MEDICACIÓN";
             }
         }
 

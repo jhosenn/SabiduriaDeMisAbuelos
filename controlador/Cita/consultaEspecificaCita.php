@@ -77,7 +77,7 @@
                     <td>
                       <div class='btn-group'>
                        <a href='modificar.cita.php?idCita=" . $reg['idcita'] . "'> <button class='btn btn-warning'>Modificar</button></a>
-                      <a href='eliminar.cita.php?idCita=" . $reg['idcita'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
+                      <a href='eliminar.citaEs.php?idCita=" . $reg['idcita'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
                       </div>
                     </td>
                   ";

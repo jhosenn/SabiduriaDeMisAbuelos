@@ -11,7 +11,7 @@
        
        if($respuesta == "OK"){
         echo"
-                <script>alert('Usuario eliminado con éxito');window.location='consultaGeneral.php';</script>";
+                <script>alert('Usuario eliminado con éxito');window.location='consultaEspecifica.php';</script>";
        }
     }
 

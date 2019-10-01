@@ -2,20 +2,20 @@
 
     require_once  dirname(__DIR__, 2) . '/modelo/conexion.php';
 
-    class ModeloEditorial{
+    class Modelousuario{
 
-        function ConsultarTodoEditorial(){
+        function ConsultarTodousuario(){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("SELECT * FROM editorial");
+            $stmt = $conexion->prepare("SELECT * FROM usuario");
             $stmt->execute();
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
         }
 
-        function GuardarEditorial($nombreEditorial){
+        function Guardarusuario($nombreusuario){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("INSERT INTO `editorial`
+            $stmt = $conexion->prepare("INSERT INTO `usuario`
                                             (`nombreEditorial`)
                                 VALUES (:nombreEditorial);");
             $stmt->bindParam(':nombreEditorial', $nombreEditorial, PDO::PARAM_STR);
@@ -43,17 +43,17 @@
             }
         }
 
-        function EliminarEditorial($idEditorial){
+        function Eliminarusuario($idusuario){
             $conexion = new Conexion();
 
-            $stmt = $conexion->prepare("DELETE FROM `editorial`
-                                        WHERE idEditorial = :idEditorial");
-            $stmt->bindParam(':idEditorial', $idEditorial, PDO::PARAM_INT);
+            $stmt = $conexion->prepare("DELETE FROM `usuario`
+                                        WHERE idusuario = :idusuario");
+            $stmt->bindParam(':idusuario', $idusuario, PDO::PARAM_INT);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL MODIFICAR LA EDITORIAL";
+                return "ERROR AL MODIFICAR USUARIO";
             }
         }
 

@@ -60,7 +60,7 @@
                         <div class="row">
                                 <div class="col-md-10">
                                         <label>Fecha y hora de la cita</label>
-                                        <input type="datetime-local" name="hf_reg_for" id="hf_reg_for" class="form-control">
+                                        <input type="datetime-local" name="hf_reg_for" id="hf_reg_for" class="form-control" size="20">
                                 </div>
                         </div>
                 </div>
