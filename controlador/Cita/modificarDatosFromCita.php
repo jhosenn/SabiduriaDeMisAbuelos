@@ -101,7 +101,7 @@
                         <div class="row">
                                 <div class="col-md-4">
                                         <label>Asunto</label><br>
-                                        <textarea name="asunto" cols="125" rows="3" placeholder="De que " value="<?php echo $reg7->asunto; ?>" >
+                                        <textarea name="asunto" cols="125" rows="3" placeholder="De que "><?php echo $reg->asunto; ?>
                                         </textarea>
                                 </div>
                         </div>
