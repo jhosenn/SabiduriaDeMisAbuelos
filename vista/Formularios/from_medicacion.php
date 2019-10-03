@@ -20,7 +20,7 @@
   <br><br>
 
   <div class="container bg-light"><br>
-    <form method="POST" action="../../controlador/Medicacion/guardarDatosDeMedicacion.php">
+    <form method="POST" action="../../controlador/medicacion/guardarDatosFrommedicacion.php">
       <div class="card">
         <div class="card-header bg-purple">
           <div class="text-center text-light">
@@ -33,7 +33,7 @@
           <div class="row">
             <div class="col-md-10">
               <label>Paciente</label>
-              <select name="usua" id="usua" class="form-control">
+              <select name="idusuario" id="idusuario" class="form-control">
                 <?php
                 $conexion = new Conexion();
                 $stmt = $conexion->prepare("select * from usuario ");
@@ -49,7 +49,7 @@
           <div class="row">
             <div class="col-md-10">
               <label>Medicamento</label>
-              <select name="medica" id="medica" class="form-control" >
+              <select name="idmedicamento" id="idmedicamento" class="form-control" >
                 <?php
                 $conexion = new Conexion();
                 $stmt = $conexion->prepare("select * from medicamento ");
@@ -68,7 +68,7 @@
         <div class="row">
           <div class="col-md-5">
             <label>Cantidad</label>
-            <input type="text" name="cant" id="cant" class="form-control">
+            <input type="text" name="cantidad" id="cantidad" class="form-control">
           </div>
 
 
@@ -77,7 +77,7 @@
 
           <div class="col-md-5">
             <label>Frecuencia</label>
-            <select name="fre" id="fre" class="form-control" >
+            <select name="frecuencia" id="frecuencia" class="form-control" >
               <option value="Cada 8 horas">Cada 8 horas</option>
               <option value="Cada 12 horas">Cada 12 horas</option>
               <option value="Cada 24 horas">Cada 24 horas</option>
@@ -92,7 +92,7 @@
         <div class="row">
          <div class="col-md-5">
           <label>Descripción</label><br>
-          <textarea name="descripcion" cols="125" rows="3" placeholder="De que " >
+          <textarea name="observacion" cols="125" rows="3" placeholder="De que " >
           </textarea>
         </div>
 
@@ -132,7 +132,7 @@
             <div class="row">
               <div class="col-md-10">
                 <label>Nombre del medicamento</label>
-                <input type="text" name="nom_medi" id="nom_medi" class="form-control">
+                <input type="text" name="idmedicacion" id="idmedicacion" class="form-control">
               </div>
             </div>
           </div>

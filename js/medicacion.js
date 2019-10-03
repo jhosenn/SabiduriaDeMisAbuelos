@@ -1,15 +1,15 @@
 $(document).ready(function(){
     $.ajax({
-        url: '../controlador/editorial/consulta.editorial.php',
+        url: '../controlador/medicacion/consultarGeneralMedicacion.php',
         dataType: 'json'
     }).done(function(response){
         var tabla = "";
         $.each(response, function(index, data){
             tabla += "<tr>";
-            tabla += "<td>" + data.nombreEditorial + "</td>";
+            tabla += "<td>" + data.nombremedicacion + "</td>";
             tabla += "<td>";
-            tabla += "<button class='btn btn-warning' onclick='Modificar(" + data.idEditorial + ");'>Modificar</button>"
-            tabla += "<button class='btn btn-danger' onclick='Eliminar(" + data.idEditorial + ");'>Eliminar</button>"
+            tabla += "<button class='btn btn-warning' onclick='Modificar(" + data.idformula + ");'>Modificar</button>"
+            tabla += "<button class='btn btn-danger' onclick='Eliminar(" + data.idformula + ");'>Eliminar</button>"
             tabla += "</td>"
             tabla += "</tr>";
         });
@@ -21,22 +21,22 @@ $(document).ready(function(){
 });
 
 function guardar(){
-    var editorial = $('#editorial').val();
+    var medicacion = $('#medicacion').val();
 
-    if(editorial == ""){
+    if(medicacion == ""){
         alert("Debe llenar todos los campos");
         return;
     }
 
     // Guardar
     $.ajax({
-        url: '../controlador/editorial/guardar.editorial.php',
-        data: { "NombreEditorial" : editorial },
+        url: '../controlador/Medicacion/guardarDatosFrommedicacion.php',
+        data: { "nombremedicacion" : medicacion },
         type: 'POST',
         dataType: 'json'
     }).done(function(response){
         if(response.Respuesta == "OK"){
-            alert("Los datos de la editorial se han guardado de forma exitosa");
+            alert("Los datos de la medicacion se han guardado de forma exitosa");
         }else{
             console.log(response.errorText);
         }
@@ -47,14 +47,14 @@ function guardar(){
 
 function Eliminar(idEliminar){
     $.ajax({
-        url: '../controlador/editorial/eliminar.editorial.php',
-        data: { "idEditorial" : idEliminar },
+        url: '../controlador/Medicacion/eliminar.medicacion.php',
+        data: { "idformula" : idformula },
         type: 'POST',
         dataType: 'json'
     }).done(function(response){
         if(response.Respuesta == "OK"){
             alert("Los datos se han eliminado de forma exitosa");
-            window.location = "editorial-consulta.html";
+            window.location = "guardarDatosFrommedicacion";
         }else{
             console.log(response.errorText);
         }
@@ -64,28 +64,28 @@ function Eliminar(idEliminar){
 }
 
 
-function Modificar(idEditorial){
-    window.location = "editorial-modificar.php?id=" + idEditorial;
+function Modificar(idformula){
+    window.location = "medicacion-modificar.php?id=" + idformula;
 }
 
-function ModificarRegistro(idEditorial){
-    var editorial = $('#editorial').val();
+function ModificarRegistro(idmedicacion){
+    var medicacion = $('#medicacion').val();
 
-    if(editorial == ""){
+    if(medicacion == ""){
         alert("Debe llenar todos los campos");
         return;
     }
 
     // Guardar
     $.ajax({
-        url: '../controlador/editorial/modificar.editorial.php',
-        data: { "NombreEditorial" : editorial, "idEditorial" : idEditorial },
+        url: '../controlador/Medicacion/modificar.medicacion.php',
+        data: { "Nombremedicaion" : edformula, "idformula" : idformula },
         type: 'POST',
         dataType: 'json'
     }).done(function(response){
         if(response.Respuesta == "OK"){
-            alert("Los datos de la editorial se han modificado de forma exitosa");
-            window.location = "editorial-consulta.html";
+            alert("Los datos de la medicacion se han modificado de forma exitosa");
+            window.location = "guardarDatosFrommedicacion";
         }else{
             console.log(response.errorText);
         }

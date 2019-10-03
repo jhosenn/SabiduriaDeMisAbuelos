@@ -59,7 +59,7 @@
               echo "
                 <td>
                   <div class='btn-group'>
-                   <a href='#'> <button class='btn btn-warning'>Modificar</button></a>
+                   <a href='modificarDatosFromMedicacion.php?idformula=" . $reg['idformula'] . "'> <button class='btn btn-warning'>Modificar</button></a>
                    <a href='eliminar.php?idformula=" . $reg['idformula'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
                   </div>
                 </td>

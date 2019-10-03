@@ -12,7 +12,7 @@
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
         }
 
-        function Guardarmedicacion($nombrecita){
+        function Guardarmedicacion($nombremedicacion){
             $conexion = new Conexion();
 
             $stmt = $conexion->prepare("INSERT INTO `formula`
@@ -23,32 +23,36 @@
                                              (`observacion`)
                                 VALUES (:idusuario);(:idmedicamento)(:cantidad)(:frecuencia)
                                 (:observacion)");
-            $stmt->bindParam('idusuario', $usua, 'idmedicamento', $medica, 'cantidad', $cant, 'frecuencia', $fre, 'observacion', $descripcion,  PDO::PARAM_STR);
+            $stmt->bindParam('idusuario', $idusuario, 'idmedicamento', $idmedicamento, 'cantidad', $cantidad, 'frecuencia', $frecuencia, 'observacion', $observacion,  PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL GUARDAR MEDICACIÓN";
+                return "ERROR AL GUARDAR LA MEDICACION";
             }
         }
         
-        function Modificarmedicacion($idformula, $nombrecompleto, $identificacion, $fechahora, $asunto, $direccion){
+        function Modificarmedicacion($idformula, $idusuario, $idmedicamento, $cantidad, $frecuencia, $observacion){
             $conexion = new Conexion();
 
             $stmt = $conexion->prepare("UPDATE `formula`
-                                        SET nombreEditorial = :nombreEditorial
+                                        SET idusuario = :idusuario,
+                                        idmedicamento = :idmedicamento,
+                                        cantidad = :cantidad,
+                                        frecuencia = :frecuencia,
+                                        observacion = :observacion
                                         WHERE idformula = :idformula");
-            $stmt->bindParam(':nombreyapellido', $nombrecompleto, PDO::PARAM_STR);
-            $stmt->bindParam(':idcita', $idcita, PDO::PARAM_INT);
-            $stmt->bindParam(':numerodocumento', $identificacion, PDO::PARAM_STR);
-            $stmt->bindParam(':fecha_hora', $fechahora, PDO::PARAM_STR);
-            $stmt->bindParam(':asunto', $asunto, PDO::PARAM_STR);
-            $stmt->bindParam(':direccion', $direccion, PDO::PARAM_STR);
+            $stmt->bindParam(':idformula', $idformula, PDO::PARAM_STR);
+            $stmt->bindParam(':idusuario', $idusuario, PDO::PARAM_INT);
+            $stmt->bindParam(':idmedicamento', $idmedicamento, PDO::PARAM_STR);
+            $stmt->bindParam(':cantidad', $cantidad, PDO::PARAM_STR);
+            $stmt->bindParam(':frecuencia', $frecuencia, PDO::PARAM_STR);
+            $stmt->bindParam(':observacion', $observacion, PDO::PARAM_STR);
 
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL MODIFICAR LA MEDICACIÓN";
+                return "ERROR AL MODIFICAR LA MEDICACION";
             }
         }
 
@@ -62,7 +66,7 @@
             if($stmt->execute()){
                 return "OK";
             }else{
-                return "ERROR AL MODIFICAR LA MEDICACIÓN";
+                return "ERROR AL MODIFICAR LA MEDICACION";
             }
         }
 
