@@ -189,16 +189,6 @@ $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
 
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="col-md-10">
-                                                    <label>Fecha y hora de ingresó</label>
-                                                    <input type="datetime-local" name="hf_ing" id="hf_ing" class="form-control" value="<?php echo $reg->fechaingreso; ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="card-body">
-                                            <div class="row">
                                                     <div class="col-md-5">
                                                                 <label>Estrato</label>
                                                                 <select name="estrato" id="estrato" class="form-control" >
