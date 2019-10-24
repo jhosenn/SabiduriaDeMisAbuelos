@@ -15,21 +15,19 @@
 
 $conexion = mysqli_connect("localhost","root","","sabiduriademisabuelos")or die("Problema con la conexion");
 
-
-
-$sql = "INSERT INTO formula(idusuario,idmedicamento,cantidad,frecuencia,observacion)
-values(" . $_POST['idusuario'] . "," . $_POST['idmedicamento'] . ",'" . $_POST['cantidad'] . "','$_POST[frecuencia]','$_POST[observacion]')";
-
-mysqli_query($conexion,$sql) or die("problemas en el select".mysqli_error($conexion));
+mysqli_query($conexion," INSERT INTO formula(idusuario,idmedicamento,cantidad,frecuencia,observacion)
+	values('$_POST[usua]','$_POST[medica]','$_POST[cant]','$_POST[fre]','$_POST[descripcion]')") or die("problemas en el select".mysqli_error($conexion));
 
 	mysqli_close($conexion);
 
+	echo'<script>
+	alert ("La medicacion fue guardada");
+	window.history.go(-1);
+	</script>';
+
 	
 
-echo'<script>
-	alert ("La medicacion fue registrada");
-	window.history.go(-1);
-</script>';
+
  ?>
 
  </body>

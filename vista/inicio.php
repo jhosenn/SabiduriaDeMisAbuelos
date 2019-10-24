@@ -49,11 +49,11 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class=""><a class="nav-link text-light" href="../vista/Formularios/from_usuario.php">Registro Usuario <span class="sr-only">(current)</span></a></li>
-                        <li><a class="nav-link text-light" href="../vista/Formularios/agendar cita.php">Agendar Cita</a></li>
-                        <li><a class="nav-link text-light" href="../vista/Formularios/from_medicacion.php">Medicación</a></li>
-                        <li><a class="nav-link text-light" href="../vista/Formularios/from_registromedicamento.php">Registro de medicamento</a></li>
-
+                     <li class=""><a class="nav-link text-light" href="../vista/Formularios/from_usuario.php">Registro Usuario <span class="sr-only">(current)</span></a></li>
+                     <li><a class="nav-link text-light" href="../vista/Formularios/agendar cita.php">Agendar Cita</a></li>
+                     <li><a class="nav-link text-light" href="../vista/Formularios/from_medicacion.php">Medicación</a></li>
+                     <li><a class="nav-link text-light" href="../vista/Formularios/from_registromedicamento.php">Registro de medicamento</a></li>
+                      <li><a class="nav-link text-light" href="../vista/Formularios/crea_nota.php">Crea Nota</a></li>
 
 
 
@@ -93,6 +93,14 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medicamento</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" role="presentation" href="../controlador/medicamento/consultaGeneralMedicamento.php">General</a></li>
+                              
+                                
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nota</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" role="presentation" href="../controlador/Nota/consultaGeneralNota.php">General</a></li>
                               
                                 
                                 </ul>

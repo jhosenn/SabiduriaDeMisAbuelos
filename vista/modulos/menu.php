@@ -58,6 +58,15 @@
                                
                                 </ul>
                             </li>
+                            
+                             <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nota</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a  href="../../controlador/Nota/consultaGeneralNota.php">General</a></li>
+                               
+                                
+                                </ul>
+                            </li>
 
                             <li><a href="../../index.html" class="btn text-light " role="button">Volver Al Menú</a></li>
                         </ul>

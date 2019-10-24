@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2019 a las 23:49:06
+-- Tiempo de generación: 25-10-2019 a las 00:45:37
 -- Versión del servidor: 10.1.40-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -42,9 +42,8 @@ CREATE TABLE `agendarcita` (
 --
 
 INSERT INTO `agendarcita` (`idcita`, `nombreyapellido`, `numerodocumento`, `fecha_hora`, `asunto`, `direccion`) VALUES
-(6, 'william hernandez', 'e21r12t34', '2019-09-30T17:30', '              efwe                          ', '33efe'),
-(7, 'william hernandez', 'e21r12t34', '2019-09-12T17:50', 'ortodooncia                                       ', 'calle7'),
-(8, 'ANDRE FELIPE ', '67895', '2019-09-18T16:05', ' EXAMEN ANAL                                      ', 'CARRERA 3');
+(9, 'MANUEL QUINTERO CALDERON', '12564789', '2019-10-30T09:00', 'Cita regulatoria para la salud del paciente       ', 'CARRERA 2'),
+(10, 'MANUEL QUINTERO CALDERON', '67895', '2109-12-23T16:00', '                    NN.N                    ', 'CARRERA 5');
 
 -- --------------------------------------------------------
 
@@ -66,11 +65,8 @@ CREATE TABLE `formula` (
 --
 
 INSERT INTO `formula` (`idformula`, `idusuario`, `idmedicamento`, `cantidad`, `frecuencia`, `observacion`) VALUES
-(1, 6, 1, '2 TABLETAS ', 'cada 8 horas', ' VIA ORAL                 '),
-(2, 6, 1, '2 pastas', '', ' aaa                 '),
-(3, 8, 3, '2 pastas', 'cada 8 horas', '  VIA ORAL                '),
-(4, 6, 1, '', 'cada 8 horas', '      '),
-(5, 6, 5, '1000', 'cada 8 horas', '          ljnajksdnajksdnajksdasjkdajksdnajsd');
+(2, 9, 7, '1ml', 'cada 8 horas', 'Debe aplicar para poder controlar los niveles de azucar          '),
+(3, 9, 7, '2', 'cada 12 horas', '          N.M');
 
 -- --------------------------------------------------------
 
@@ -90,11 +86,19 @@ CREATE TABLE `medicamento` (
 --
 
 INSERT INTO `medicamento` (`idmedicamento`, `nombre`, `descripcion`, `estado`) VALUES
-(1, 'ACETAMINOFEN', 'TABLETA	                            	\r\n	                            ', b'1'),
-(2, 'NAPROXENO', 'PASTAS 	                            	\r\n	                            ', b'1'),
-(3, 'NAPROXENO', 'PASTAS 	                            	\r\n	                            ', b'1'),
-(4, 'PARACETAMOL', 'PASTA	                            	\r\n	                            ', b'1'),
-(5, 'penecilina', 'asdasdjn                ', b'1');
+(7, 'Insulina', 'Necesaria para la diabetes', b'1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `nota`
+--
+
+CREATE TABLE `nota` (
+  `idnota` int(11) NOT NULL,
+  `observacion` varchar(9999) DEFAULT NULL,
+  `fecha_hora` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -129,9 +133,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `nombrecompleto`, `tipodocumento`, `sexo`, `numerodocumento`, `edad`, `rh`, `eps`, `areaprotegida`, `fechanacimiento`, `origen`, `estadocivil`, `fechaingreso`, `estrato`, `escolaridad`, `diagnostico`, `nombreyapellido`, `telefono`, `parentesco`) VALUES
-(6, 'jhosen', 'T.I', 'F', '45678', '17', 'A+', 'nueva eps', 'medilaser', '2001-12-20', 'neiva', 'Soltero(a)', '2019-07-18T14:08', 'Uno', 'bachiller', 'arrechera                                                    ', 'miguel', '3204679176', 'mozo'),
-(7, 'william hernandez', 'C.C', 'M', '67891', '18', 'O-', 'nueva eps', 'medilaser', '2001-01-25', 'caqueta', 'Divorciado(a)', '2018-08-04T15:05', 'Uno', 'bachiller', ' parquinson                                                   ', 'camacho', '3102085302', 'amigo'),
-(8, 'ANDRE FELIPE ', 'C.C', 'M', '67895', '32', 'A-', 'nueva eps', 'medilaser', '2001-10-09', 'BARRANQUILLA', 'Soltero(a)', '2019-09-12T15:29', 'Cuatr', 'bachiller', 'COMIDA                                                   ', 'camacho', '322222940', 'amigo');
+(9, 'MANUEL QUINTERO CALDERON', 'C.C', 'M', '1678459', '65', 'O+', 'Medimás', 'SURA', '2000-06-13', 'Neiva', 'Viudo(a)', '2019-10-18T07:00', 'Dos', 'Ingeniero', 'Tiene Diabetes grado 4', 'JHOSEN HERNANDEZ', '3214587952', 'Bisnieto');
 
 -- --------------------------------------------------------
 
@@ -150,7 +152,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idUsuario`, `usuario`, `contrasena`) VALUES
-(1, 'LUCINDA QUINTERO', '2bcd65834689ce424be9733ea14cd074');
+(1, 'LUCINDA QUINTERO', '8d4c2bd972d66de1fe86cc598a5312ba');
 
 --
 -- Índices para tablas volcadas
@@ -177,6 +179,12 @@ ALTER TABLE `medicamento`
   ADD PRIMARY KEY (`idmedicamento`);
 
 --
+-- Indices de la tabla `nota`
+--
+ALTER TABLE `nota`
+  ADD PRIMARY KEY (`idnota`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -196,25 +204,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `agendarcita`
 --
 ALTER TABLE `agendarcita`
-  MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `formula`
 --
 ALTER TABLE `formula`
-  MODIFY `idformula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idformula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `medicamento`
 --
 ALTER TABLE `medicamento`
-  MODIFY `idmedicamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idmedicamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `nota`
+--
+ALTER TABLE `nota`
+  MODIFY `idnota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
