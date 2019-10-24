@@ -44,7 +44,7 @@
             }
         }
         
-        function Modificarusuario($idusuario, $nombre,$ti_doc,$sexo,$var_doc,$var_edad,$var_rh,$var_eps,$a_proteg,$fec_nac,$var_orig,$es_civ,$hr_ing,$estrato,$var_esc,$diagnostico,$nombre_apellido,$var_tel,$var_par){
+        function Modificarusuario($idusuario, $nombre,$ti_doc,$sexo,$var_doc,$var_edad,$var_rh,$var_eps,$a_proteg,$fec_nac,$var_orig,$es_civ,$estrato,$var_esc,$diagnostico,$nombre_apellido,$var_tel,$var_par){
             $conexion = new Conexion();
 
             $stmt = $conexion->prepare("UPDATE `usuario`
@@ -59,13 +59,12 @@
                                          fechanacimiento = :fechanacimiento,
                                          origen = :origen,
                                          estadocivil = :estadocivil,
-                                         fechaingreso = :fechaingreso,
                                          estrato = :estrato,
                                          escolaridad = :escolaridad,
                                          diagnostico = :diagnostico,
                                          nombreyapellido = :nombreyapellido,
                                          telefono = :telefono,
-                                         parentesco = :parentesco,
+                                         parentesco = :parentesco
                                         WHERE idusuario = :idusuario");
             $stmt->bindParam(':nombrecompleto', $nombre, PDO::PARAM_STR);
             $stmt->bindParam(':tipodocumento',$ti_doc, PDO::PARAM_STR);
@@ -78,16 +77,16 @@
             $stmt->bindParam(':fechanacimiento',$fec_nac, PDO::PARAM_STR);
             $stmt->bindParam(':origen',$var_orig, PDO::PARAM_STR);
             $stmt->bindParam(':estadocivil',$es_civ, PDO::PARAM_STR);
-            $stmt->bindParam(':fechaingreso',$hr_ing, PDO::PARAM_STR);
             $stmt->bindParam(':estrato',$estrato, PDO::PARAM_STR);
             $stmt->bindParam(':escolaridad',$var_esc, PDO::PARAM_STR);
             $stmt->bindParam(':diagnostico',$diagnostico, PDO::PARAM_STR);
             $stmt->bindParam(':nombreyapellido',$nombre_apellido, PDO::PARAM_STR);
             $stmt->bindParam(':telefono',$var_tel, PDO::PARAM_STR);
-            $stmt->bindParam('parentesco',$var_par, PDO::PARAM_STR);
+            $stmt->bindParam(':parentesco',$var_par, PDO::PARAM_STR);
             $stmt->bindParam(':idusuario', $idusuario, PDO::PARAM_INT);
 
             if($stmt->execute()){
+                
                 return "OK";
             }else{
                 return "ERROR AL MODIFICAR EL USUARIO";

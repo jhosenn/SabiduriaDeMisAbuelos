@@ -20,7 +20,6 @@
         $fec_nac = $_POST["fec_nac"];
         $var_orig = $_POST["var_orig"];
         $es_civ = $_POST["es_civ"];
-        $hr_ing = $_POST["hr_ing"];
         $estrato = $_POST["estrato"];
         $var_esc = $_POST["var_esc"];
         $diagnostico = $_POST["diagnostico"];
@@ -30,7 +29,7 @@
 
 
         $modelousuario = new Modelousuario();
-        $respuesta["Respuesta"] = $modelousuario->Modificarusuario($id,$nombre,$ti_doc,$sexo,$var_doc,$var_edad,$var_rh,$var_eps,$a_proteg,$fec_nac,$var_orig,$es_civ,$hr_ing, $estrato,$var_esc,$diagnostico,$nombre_apellido, $var_tel,$var_par );
+        $respuesta["Respuesta"] = $modelousuario->Modificarusuario($idusuario,$nombre,$ti_doc,$sexo,$var_doc,$var_edad,$var_rh,$var_eps,$a_proteg,$fec_nac,$var_orig,$es_civ, $estrato,$var_esc,$diagnostico,$nombre_apellido, $var_tel,$var_par );
         echo "<script>window.location = 'consultaGeneral.php';</script>";
     }
 
