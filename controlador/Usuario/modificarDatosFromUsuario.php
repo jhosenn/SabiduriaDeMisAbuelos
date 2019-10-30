@@ -50,8 +50,7 @@ $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
                                                     <h1> Modificar Usuario</h1>
                                             </div>
                                                 
-                                                <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
-                                            
+                                                                                            
                                         </div>
                                 </div>
                                 <input type="hidden" name="idusuario" value="<?php echo $reg->idusuario; ?>">
@@ -70,11 +69,7 @@ $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
                                             <div class="row">
                                                     <div class="col-md-5">
                                                         <label>Tipo de documento</label><br>
-                                                         <input type="radio" name="ti_doc" value="T.I" id="ti_doc" class=""<?php
-                                                            if($reg->tipodocumento == "T.I"){
-                                                                echo "checked";
-                                                            }
-                                                          ?>><label>T.I </label>
+                                                        
                                                          <input type="radio" name="ti_doc" id="ti_doc" value="R.C" class=""<?php
                                                             if($reg->tipodocumento == "R.C"){
                                                                 echo "checked";

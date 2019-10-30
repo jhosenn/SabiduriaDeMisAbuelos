@@ -38,7 +38,7 @@
                         <div class="text-center text-light">
                             <h1>Modificar Cita</h1>
                         </div>
-                        <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
+                       
                     </div>
             </div>
             <input type="hidden" name="idcita" value="<?php echo $reg->idcita; ?>">

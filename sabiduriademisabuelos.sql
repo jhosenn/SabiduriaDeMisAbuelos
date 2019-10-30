@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-10-2019 a las 00:45:37
--- Versión del servidor: 10.1.40-MariaDB
--- Versión de PHP: 7.3.5
+-- Tiempo de generación: 30-10-2019 a las 21:16:39
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -37,14 +37,6 @@ CREATE TABLE `agendarcita` (
   `direccion` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `agendarcita`
---
-
-INSERT INTO `agendarcita` (`idcita`, `nombreyapellido`, `numerodocumento`, `fecha_hora`, `asunto`, `direccion`) VALUES
-(9, 'MANUEL QUINTERO CALDERON', '12564789', '2019-10-30T09:00', 'Cita regulatoria para la salud del paciente       ', 'CARRERA 2'),
-(10, 'MANUEL QUINTERO CALDERON', '67895', '2109-12-23T16:00', '                    NN.N                    ', 'CARRERA 5');
-
 -- --------------------------------------------------------
 
 --
@@ -56,17 +48,9 @@ CREATE TABLE `formula` (
   `idusuario` int(11) NOT NULL,
   `idmedicamento` int(11) NOT NULL,
   `cantidad` varchar(100) NOT NULL,
-  `frecuencia` enum('diario','cada 8 horas','cada 12 horas','') NOT NULL,
+  `frecuencia` varchar(50) NOT NULL,
   `observacion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `formula`
---
-
-INSERT INTO `formula` (`idformula`, `idusuario`, `idmedicamento`, `cantidad`, `frecuencia`, `observacion`) VALUES
-(2, 9, 7, '1ml', 'cada 8 horas', 'Debe aplicar para poder controlar los niveles de azucar          '),
-(3, 9, 7, '2', 'cada 12 horas', '          N.M');
 
 -- --------------------------------------------------------
 
@@ -86,7 +70,7 @@ CREATE TABLE `medicamento` (
 --
 
 INSERT INTO `medicamento` (`idmedicamento`, `nombre`, `descripcion`, `estado`) VALUES
-(7, 'Insulina', 'Necesaria para la diabetes', b'1');
+(11, 'metil cetona', 'pasta	                            	\r\n	                            ', b'1');
 
 -- --------------------------------------------------------
 
@@ -133,7 +117,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `nombrecompleto`, `tipodocumento`, `sexo`, `numerodocumento`, `edad`, `rh`, `eps`, `areaprotegida`, `fechanacimiento`, `origen`, `estadocivil`, `fechaingreso`, `estrato`, `escolaridad`, `diagnostico`, `nombreyapellido`, `telefono`, `parentesco`) VALUES
-(9, 'MANUEL QUINTERO CALDERON', 'C.C', 'M', '1678459', '65', 'O+', 'Medimás', 'SURA', '2000-06-13', 'Neiva', 'Viudo(a)', '2019-10-18T07:00', 'Dos', 'Ingeniero', 'Tiene Diabetes grado 4', 'JHOSEN HERNANDEZ', '3214587952', 'Bisnieto');
+(10, 'jhon ', 'C.C', 'M', '7730704', '32', 'O+', 'medilaser', 'medilaser', '1998-12-02', 'neiva', 'Soltero(a)', '2018-10-30T17:30', 'Uno', 'baciller', 'diabetes                                                    ', 'miguel', '3204679176', 'hermano');
 
 -- --------------------------------------------------------
 
@@ -204,31 +188,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `agendarcita`
 --
 ALTER TABLE `agendarcita`
-  MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `formula`
 --
 ALTER TABLE `formula`
-  MODIFY `idformula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idformula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `medicamento`
 --
 ALTER TABLE `medicamento`
-  MODIFY `idmedicamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idmedicamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `nota`
 --
 ALTER TABLE `nota`
-  MODIFY `idnota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idnota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
