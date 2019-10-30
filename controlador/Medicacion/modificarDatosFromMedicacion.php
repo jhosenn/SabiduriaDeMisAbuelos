@@ -42,12 +42,13 @@
           </div>
           <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
         </div>
-     </div>    
+     </div> 
+      <input type="hidden" name="idformula" value="<?php echo $reg->idformula; ?>">   
         <div class="card-body">
           <div class="row">
             <div class="col-md-10">
               <label>Paciente</label>
-              <select name="idusuario" id="idusuario" class="form-control" value="<?php echo $reg->idusuario; ?>">
+              <select name="idusuario" id="idusuario" class="form-control">
                 <?php
                 $conexion = new Conexion();
                 $stmt = $conexion->prepare("select * from usuario ");
@@ -57,7 +58,7 @@
                   if($reg->idusuario == $row->idusuario){
                                                         echo '<option value="' . $row->idusuario . '" selected>' . $row->idusuario . '</option>';    
                                                     }else{
-                                                        echo '<option value="' . $row->idusuario . '">' . $row->idusuario . '</option>';
+                                                        echo '<option value="' . $row->idusuario . '" selected>' . $row->idusuario . '</option>';
                                                     };
                 }
                 ?>
@@ -91,22 +92,29 @@
 
           <div class="col-md-5">
             <label>Frecuencia</label>
-            <select name="frecuencia" id="frecuencia" class="form-control" value="<?php echo $reg->frecuencia; ?>" >
-              <option value="Cada 8 horas">Cada 8 horas</option>
-              <option value="Cada 12 horas">Cada 12 horas</option>
-              <option value="Cada 24 horas">Cada 24 horas</option>
-              <option value="Cada 8 dias">Cada 8 dias</option>
-              <option value="Cada 15 dias">Cada 15 dias</option>
+            <select name="frecuencia" id="frecuencia" class="form-control">
+              <option value="Cada 8 horas" <?php
+               if($reg->frecuencia == "Cada 8 horas"){echo "selected";}?> >Cada 8 horas</option>
+               <option value="Cada 12 horas" <?php
+               if($reg->frecuencia == "Cada 12 horas"){echo "selected";}?> >Cada 12 horas</option>
+               <option value="Cada 24 horas" <?php
+               if($reg->frecuencia == "Cada 24 horas"){echo "selected";}?> >Cada 24 horas</option>
+               <option value="Cada 8 dias" <?php
+               if($reg->frecuencia == "Cada 8 dias"){echo "selected";}?> >Cada 8 dias</option>
+               <option value="Cada 15 dias" <?php
+               if($reg->frecuencia == "Cada 15 dias"){echo "selected";}?> >Cada 15 dias</option>
+              
             </select>
           </div>
         </div>  
 
 
 
+
         <div class="row">
          <div class="col-md-5">
           <label>Descripción</label><br>
-          <textarea name="observacion" cols="125" rows="3" placeholder="Descripción Especifica " value="<?php echo $reg->observacion; ?>" >
+          <textarea name="observacion" cols="125" rows="3" placeholder="Descripción Especifica "><?php echo $reg->observacion; ?> 
           </textarea>
         </div>
 
@@ -118,13 +126,15 @@
 
 
        <div class="card-footer bg-purple">
-           <div class="text-center ">
-             <div class="btn-group">
-              <input type="submit" name="Modificar" value="Modificar" class="btn btn-light">&nbsp; 
-              <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
-            </div>
-          </div>
-      </div><br>
+                                            <div class="text-center ">
+                                                <div class="btn-group"><br>
+                                                    <input type="submit" name="Guardar" value="Guardar" class="btn btn-light"> &nbsp;
+                                                    <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
+                                                </div>
+
+                                            </div>
+                                        </div><br>
+
     </form>
 </div>   
 
