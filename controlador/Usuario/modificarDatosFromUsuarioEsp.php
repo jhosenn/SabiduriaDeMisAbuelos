@@ -42,7 +42,7 @@ $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos") or
     <br><br>
                     <div class="container bg-light
                     "><br>
-                         <form method="POST" action="../../controlador/Usuario/modificar.Usuario.php">     
+                         <form method="POST" action="../../controlador/Usuario/modificar.Usuario.Especifico.php">     
                                 <div class="card">
                                         <div class="card-header bg-purple">
 

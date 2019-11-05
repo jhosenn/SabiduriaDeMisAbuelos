@@ -33,6 +33,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
+                            <li><a class="nav-link text-light" href="../consulta_comun/fromCrearNotaComun.php">Crear Nota</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultar Usuario</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -62,7 +63,7 @@
                              <li class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nota</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a  href="../../controlador/Nota/consultaGeneralNota.php">General</a></li>
+                                <li><a  href="../consulta_comun/consultaGeneralNota.php">General</a></li>
                                
                                 
                                 </ul>
@@ -78,3 +79,5 @@
 
 </body>
 </html>
+
+

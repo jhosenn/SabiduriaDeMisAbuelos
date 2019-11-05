@@ -18,7 +18,7 @@
   <div class="container bg-light"><br>
 
     <div class="card">
-      <div class="card-header bg-purple">
+      <div class="card-header bg-info">
         <div class="row">
           <div class="col">
            <div class="text-center text-light ">
@@ -56,7 +56,7 @@
                   echo "
                     <td>
                       <div class='btn-group'>
-                      <a href='eliminar.nota.php?idnota=" . $reg['idnota'] . "' class='btn btn-danger'>Eliminar</a>
+                      <a href='../../controlador/Nota/eliminarNotaComun.php?idnota=" . $reg['idnota'] . "' class='btn btn-danger'>Eliminar</a>
                       </div>
                     </td>
                   ";

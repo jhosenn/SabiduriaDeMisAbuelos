@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>CREAR NOTA</title>
+    <title>SABIDURIA DE MIS ABUELOS </title>
     <link rel="stylesheet" href="../../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 
 <body>
     <?php 
-    include '../modulos/menu_administrador.php';
+    include '../modulos/menu.php';
      ?>
 
     
@@ -20,11 +20,11 @@
          <form method="POST" action="../../controlador/Nota/guardarDatosFromnota.php">
             
             <div class="card">
-                    <div class="card-header bg-purple">
+                    <div class="card-header bg-info">
                         <div class="text-center text-light">
                             <h1>CREAR NOTA</h1>
                         </div>
-                        <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
+                        <a class="btn btn-default btn-light" href="../registro.html" role="button">Volver al inicio</a>
                     </div>
             </div>
                
@@ -50,7 +50,7 @@
                 
                
                 
-            <div class="card-footer bg-purple">
+            <div class="card-footer bg-info">
                         <div class="text-center ">
                                 <div class="btn-group">
                                         <input type="submit" name="Guardar" value="Guardar" class="btn btn-light">

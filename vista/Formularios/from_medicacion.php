@@ -132,7 +132,7 @@
             <div class="row">
               <div class="col-md-10">
                 <label>Nombre del medicamento</label>
-                <input type="text" name="idmedicacion" id="idmedicacion" class="form-control">
+                <input type="text" name="nom_medi" id="idmedicacion" class="form-control">
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@
             <div class="row">
               <div class="col-md-10">
                 <label>Descripción</label><br>
-                <textarea name="descripcion" id="descripcion" cols="50" rows="4" placeholder="EJ: fecha de vencimiento, inyeccion,pasta">
+                <textarea name="descripcion" id="descripcion" cols="50" rows="4" >
                 </textarea>
               </div>
             </div>

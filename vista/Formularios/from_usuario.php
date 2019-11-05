@@ -45,8 +45,6 @@
                                             <div class="row">
                                                     <div class="col-md-5">
                                                         <label>Tipo de documento</label><br>
-                                                         <input type="radio" name="ti_doc" value="T.I" id="ti_doc" class="form"><label>T.I </label>
-                                                         <input type="radio" name="ti_doc" id="ti_doc" value="R.C" class=""><label>R.C</label>
                                                           <input type="radio" name="ti_doc" value="C.C" id="ti_doc" class=""><label> C.C</label>
                                                           <input type="radio" name="ti_doc" value="C.E" id="ti_doc" class=""><label>C.E</label>
                                                           <input type="radio" name="ti_doc" value="PAS" id="ti_doc" class=""><label>PAS</label>
@@ -96,7 +94,7 @@
                                             <div class="row">
                                                     <div class="col-md-5">
                                                         <label>Fecha de nacimiento</label>
-                                                        <input type="date" name="fec_nac" id="fec_nac" min="2000-01-01" class="form-control">
+                                                        <input type="date" name="fec_nac" id="fec_nac" min="0000-00-00" class="form-control">
                                                     </div>
                                                     <div class="col-md-5">
                                                         <label>Origen</label>

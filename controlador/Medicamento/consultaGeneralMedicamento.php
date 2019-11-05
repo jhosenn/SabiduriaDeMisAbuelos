@@ -49,7 +49,7 @@
               echo "<tr>";
               echo "<td>".$reg['nombre']."</td>";
               echo "<td>".$reg['descripcion']."</td>";
-              echo "<td>".$reg['estado']."</td>";
+              echo "<td>". ($reg['estado'] == "1" ? "Activo" : "Inactivo")."</td>";
          
               echo "
                 <td>

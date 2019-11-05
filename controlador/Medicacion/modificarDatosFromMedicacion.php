@@ -40,93 +40,118 @@
           <div class="text-center text-light">
             <h1>Modificacion de Medicación</h1>
           </div>
-          <a class="btn btn-default btn-light" href="../inicio.php" role="button">Volver al inicio</a>
+         
         </div>
-     </div>    
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-10">
-              <label>Paciente</label>
-              <select name="idusuario" id="idusuario" class="form-control" value="<?php echo $reg->idusuario; ?>">
-                <?php
-                $conexion = new Conexion();
-                $stmt = $conexion->prepare("select * from usuario ");
-                $stmt->execute();
-                $registros = $stmt->fetchAll(PDO::FETCH_OBJ);
-                foreach ($registros as $value) {
-                  if($reg->idusuario == $row->idusuario){
-                                                        echo '<option value="' . $row->idusuario . '" selected>' . $row->idusuario . '</option>';    
+     </div> 
+      <input type="hidden" name="idformula" value="<?php echo $reg->idformula; ?>">   
+
+ <div class="card-body">
+                        <div class="row">
+                                <div class="col-md-10">
+                                        <label>Nombre y apellido</label>
+                                        
+                                        <select name="usuario" id="idusuario" class="form-control">
+                                            <?php
+                                                $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos");
+                                                $registros=mysqli_query($conexion,"select * from usuario");
+                                                while($row = mysqli_fetch_object($registros)){
+                                                    if($reg->idusuario == $row->idusuario){
+                                                        echo '<option value="' . $row->idusuario . '" selected>' . $row->nombrecompleto . '</option>';    
                                                     }else{
-                                                        echo '<option value="' . $row->idusuario . '">' . $row->idusuario . '</option>';
-                                                    };
-                }
-                ?>
-              </select>
-            </div>
-          </div>
+                                                        echo '<option value="' . $row->idusuario . '">' . $row->nombrecompleto . '</option>';
+                                                    }
+                                                    
+                                                }
+                                            ?>
+                                        </select>
+                                </div>
+                        </div>
+                </div>
+          <div class="card-body">
           <div class="row">
             <div class="col-md-10">
               <label>Medicamento</label>
               <select name="idmedicamento" id="idmedicamento" class="form-control" value="<?php echo $reg->idmedicamento; ?>" >
                 <?php
-                $conexion = new Conexion();
-                $stmt = $conexion->prepare("select * from medicamento ");
-                $stmt->execute();
-                $registros = $stmt->fetchAll(PDO::FETCH_OBJ);
-                foreach ($registros as $value) {
+               $conexion=mysqli_connect("localhost","root","","sabiduriademisabuelos");
+                $registros=mysqli_query($conexion,"select * from medicamento");
+                while ($row = mysqli_fetch_object($registros)) {
                  if($reg->idmedicamento == $row->idmedicamento){
-                                                        echo '<option value="' . $row->idmedicamento . '" selected>' . $row->idmedicamento . '</option>';    
-                                                    }else{
-                                                        echo '<option value="' . $row->idmedicamento . '">' . $row->idmedicamento . '</option>';
+                    echo '<option value="' . $row->idmedicamento . '" selected>' . $row->nombre . '</option>';    
+                   }else{
+                       echo '<option value="' . $row->idmedicamento . '">' . $row->nombre . '</option>';
                                                     };
                 }
                 ?>
               </select>
+              </div>
+            </div>
+          </div>
            
+        <div class="card-body">   
         <div class="row">
           <div class="col-md-5">
             <label>Cantidad</label>
             <input type="text" name="cantidad" id="cantidad" class="form-control" value="<?php echo $reg->cantidad; ?>">
           </div>
-
+                   
           <div class="col-md-5">
             <label>Frecuencia</label>
-            <select name="frecuencia" id="frecuencia" class="form-control" value="<?php echo $reg->frecuencia; ?>" >
-              <option value="Cada 8 horas">Cada 8 horas</option>
-              <option value="Cada 12 horas">Cada 12 horas</option>
-              <option value="Cada 24 horas">Cada 24 horas</option>
-              <option value="Cada 8 dias">Cada 8 dias</option>
-              <option value="Cada 15 dias">Cada 15 dias</option>
+            <select name="frecuencia" id="frecuencia" class="form-control">
+              <option value="Cada 8 horas" <?php
+               if($reg->frecuencia == "Cada 8 horas"){echo "selected";}?> >Cada 8 horas</option>
+               <option value="Cada 12 horas" <?php
+               if($reg->frecuencia == "Cada 12 horas"){echo "selected";}?> >Cada 12 horas</option>
+               <option value="Cada 24 horas" <?php
+               if($reg->frecuencia == "Cada 24 horas"){echo "selected";}?> >Cada 24 horas</option>
+               <option value="Cada 8 dias" <?php
+               if($reg->frecuencia == "Cada 8 dias"){echo "selected";}?> >Cada 8 dias</option>
+               <option value="Cada 15 dias" <?php
+               if($reg->frecuencia == "Cada 15 dias"){echo "selected";}?> >Cada 15 dias</option>
+              
             </select>
           </div>
-        </div>  
-
-
-
-        <div class="row">
-         <div class="col-md-5">
-          <label>Descripción</label><br>
-          <textarea name="observacion" cols="125" rows="3" placeholder="Descripción Especifica " value="<?php echo $reg->observacion; ?>" >
-          </textarea>
         </div>
+        </div>  
+        
 
-      </div>
-      </div>
+
+
+        <div class="card-body">
+        <div class="row">
+           <div class="col-md-5">
+            <label>Descripción</label><br>
+              <textarea name="observacion" cols="125" rows="3" placeholder="Descripción Especifica "><?php echo $reg->observacion; ?> 
+              </textarea>
+          </div>
+       </div>
+       </div>
+
+
+      
       
   
 
 
 
        <div class="card-footer bg-purple">
-           <div class="text-center ">
-             <div class="btn-group">
-              <input type="submit" name="Modificar" value="Modificar" class="btn btn-light">&nbsp; 
-              <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
-            </div>
-          </div>
-      </div><br>
-    </form>
-</div>   
+           <div class="text-center">
+                  <div class="btn-group">
+                   <input type="submit" name="Guardar" value="Guardar" class="btn btn-light">
+                    &nbsp;
+                    <input type="reset" name="Limpiar" value="Limpiar" class="btn btn-light">
+                 </div>
 
-<script src="../../assets/js/jquery.min.js"></script>
-<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+              </div>
+      </div><br>
+       
+    </form>
+    </div>
+  
+
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

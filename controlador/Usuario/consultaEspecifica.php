@@ -84,7 +84,7 @@
               echo "
                 <td>
                   <div class='btn-group'>
-                   <a href='#'> <button class='btn btn-warning'>Modificar</button></a>
+                   <a href='modificar.Usuario.Especifico.php?idusuario=" . $reg['idusuario'] . "'> <button class='btn btn-warning'>Modificar</button></a>
                   <a href='eliminar.usuarioEs.php?idusuario=" . $reg['idusuario'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
                    </div>
                 </td>

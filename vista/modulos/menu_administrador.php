@@ -110,7 +110,7 @@ if(isset($_SESSION) && count($_SESSION) <= 0){
                                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" role="presentation" href="../../vista/Formularios/from_cambio_contraseña.php">Cambiar contraseña</a></li>
-                                <li><a class="dropdown-item" role="presentation" href="/SabiduriaDeMisAbuelos/vista/cerrar_session.php">Cerrar</a></li>
+                                <li><a class="dropdown-item" role="presentation" href="SabiduriaDeMisAbuelos/vista/cerrar_session.php">Cerrar</a></li>
                               
                                 
                                 </ul>
