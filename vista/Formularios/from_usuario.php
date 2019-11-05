@@ -150,7 +150,7 @@
                                             <div class="row">
                                                 <div class="col-md-10">
                                                     <label>Diagnóstico</label><br>
-                                                    <textarea name="diagnostico" cols="125" rows="3" placeholder="Describe el diagnostico del Usuario" >
+                                                    <textarea name="diagnostico" cols="125" rows="3"  >
                                                     </textarea>
                                                 </div>
                                             </div>

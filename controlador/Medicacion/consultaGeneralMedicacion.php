@@ -60,7 +60,7 @@
                 <td>
                   <div class='btn-group'>
                    <a href='modificarDatosFromMedicacion.php?idformula=" . $reg['idformula'] . "'> <button class='btn btn-warning'>Modificar</button></a>
-                   <a href='eliminar.php?idformula=" . $reg['idformula'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
+                   <a href='eliminar.Medicacion.php?idformula=" . $reg['idformula'] . "'>  <button class='btn btn-danger'>Eliminar</button></a>
                   </div>
                 </td>
               ";
